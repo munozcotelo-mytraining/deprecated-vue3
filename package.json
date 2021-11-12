@@ -6,6 +6,7 @@
     "scripts": {
         "_build": "npm run generate:live; npm run generate:live-source",
         "build": "npm run generate:live",
+        "watch": "npm run clean:dist; NODE_ENV=production webpack --watch --progress --mode=development --config ./webpack/normal.config.js",
         "clean:test": "rm -rf ./karma-typescript-bundle-*; rm -rf ./ts-node-*; rm -rf ./.nyc_output; rm -rf ./coverage/*",
         "clean:dist": "find ./dist -type f -not -iname source-* -delete",
         "clean:dist:source": "find ./dist -type f -iname source-* -delete",
@@ -18,18 +19,23 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "typescript": "^4.4.4",
         "vue": "^3.2.21"
+    },
+    "_devDependencies": {
+        "@vue/compiler-sfc": "^3.2.21",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.4.4"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.21",
         "ts-loader": "^9.2.6",
-        "typescript": "^4.4.4",
         "vue-loader": "^15.9.8",
-        "webpack": "4.27.1",
-        "webpack-cli": "3.1.2",
-        "webpack-dev-middleware": "3.4.0",
-        "webpack-hot-middleware": "2.24.3",
-        "webpack-manifest-plugin": "2.0.4",
-        "webpack-merge": "4.1.5"
+        "webpack": "^5.64.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-middleware": "^5.2.1",
+        "webpack-hot-middleware": "^2.25.1",
+        "webpack-manifest-plugin": "^4.0.2",
+        "webpack-merge": "^5.8.0"
     }
 }

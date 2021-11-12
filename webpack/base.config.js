@@ -3,17 +3,17 @@ const VueLoaderPlugin = require( "vue-loader/lib/plugin" );
 const webpack         = require( "webpack" );
 // const { CheckerPlugin } = require( "awesome-typescript-loader" );
 
-var contextPath = path.resolve( __dirname, ".." );
-var distPath    = path.resolve( contextPath, "dist" );
-var srcPath     = path.resolve( contextPath, "src" );
-var configPath  = path.resolve( contextPath, "config" );
-var bannersPath = path.resolve( contextPath, "libs", "banners" );
+const contextPath = path.resolve( __dirname, ".." );
+const distPath    = path.resolve( contextPath, "dist" );
+const srcPath     = path.resolve( contextPath, "src" );
+const configPath  = path.resolve( contextPath, "config" );
+const bannersPath = path.resolve( contextPath, "libs", "banners" );
 
 /* Customize these values */
-var componentName = "vue-component";
-var jsonpName     = "VueComponentFrontend";
+const componentName = "vue-component";
+const jsonpName     = "VueComponentFrontend";
 
-var configuration = {
+const configuration = {
 
     context : contextPath,
 
@@ -71,13 +71,21 @@ var configuration = {
 
     resolve : {
         extensions : [ ".ts", ".tsx", ".js", ".vue" ],
-        //  vmlazaro - enables compiler and thus the full build
-        //             instead of rutime-only build
-        //  https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
-        // ,
-        // alias : {
-        //     'vue$': path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm.js" )
-        // }
+        /*  vmlazaro - enables compiler and thus the full build
+         *             instead of rutime-only build
+         *  para vue2 --> https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
+         *  para vue3 --> https://v3.vuejs.org/guide/installation.html#with-a-bundler
+         *
+         * amgarcia: Es decir:
+         *  sin el alias -> se necesita vue-loader porque coge la propiedad 'template' y la convierte en una funcion 'render'. Necesitamos pues que todos nuestros componentes sean .vue
+         *  con el alias -> no se neceisa vue-loader. Podemos crear componentes que sean simplemente .ts con la propiedad 'template' ( o funcion 'render', si nos gusta mas )
+         */
+        alias : {
+            // // 'vue$': path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm.js" ) /* para vue2 */
+            "vue$": path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm-bundler.js" ) /* para vue3*/
+        }
+
+
     },
 
     module : {
@@ -148,7 +156,7 @@ var configuration = {
 
         // new CheckerPlugin(),
 
-        new webpack.HashedModuleIdsPlugin(),
+        new webpack.ids.HashedModuleIdsPlugin(),
 
         new VueLoaderPlugin(),
 

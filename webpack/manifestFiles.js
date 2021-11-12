@@ -1,4 +1,4 @@
-const _ = require("lodash");
+// const _ = require("lodash");
 
 // var componentName = "vue-component";
 var componentName = "vue3";
@@ -28,11 +28,15 @@ let manifest = {
 
     generateFunction: ( seed, files ) => {
 
+        // console.info( "files", files );
+
         var manifest = {};
 
         for ( item of manifestFiles ) {
 
-            const fileSeed = _.find( _.keys( seed ), ( tmp ) => { return tmp === item.name } );
+            // const fileSeed = _.find( _.keys( seed ), ( tmp ) => { return tmp === item.name } );
+
+            const fileSeed = Reflect.ownKeys( seed ).find( ( tmp ) => { return tmp === item.name } );
 
             if ( fileSeed !== undefined ) {
 
@@ -46,7 +50,9 @@ let manifest = {
 
             } else {
 
-                const file = _.find( files, { "name": item.name } );
+                // const file = _.find( files, { "name": item.name } );
+
+                const file = files.find( ( file ) => { return file === item.name } );
 
                 if ( file !== undefined ) {
 
@@ -70,7 +76,9 @@ let manifest = {
 
     reduceFunction: function( manifest, data, seed ) {
 
-        const file = _.find( manifestFiles, [ "name", data.name ] );
+        // const file = _.find( manifestFiles, [ "name", data.name ] );
+
+        const file = manifestFiles.find( ( file ) => { return file === data.name } );
 
         if ( file !== undefined ) {
 

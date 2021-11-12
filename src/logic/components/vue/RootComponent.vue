@@ -1,6 +1,8 @@
-import * as vue from "vue";
+<template>
+    <div>hola</div>
+</template>
 
-// import * as RootComponent from "./logic/components/vue/RootComponent.vue";
+<script lang="ts">
 
 interface IBook {
     name   : string;
@@ -30,7 +32,7 @@ const RootComponent = vue.defineComponent( {
     },
 
     mounted () {
-        console.info( "En el hook de mounted" );
+        console.info( "En el hook de mounted (12)" );
         console.info( this.book.name );
     },
 
@@ -42,4 +44,6 @@ const RootComponent = vue.defineComponent( {
 
 } );
 
-const vm : vue.ComponentPublicInstance = vue.createApp( RootComponent ).mount( "#bootstrap" );
+export default RootComponent;
+
+<script>
