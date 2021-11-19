@@ -1,6 +1,8 @@
 import * as vue from "vue";
 
-// import * as RootComponent from "./logic/components/vue/RootComponent.vue";
+import * as OneComponent from "./logic/components/vue/OneComponent.vue";
+import * as OneJsComponent from "./logic/components/vue/OneJsComponent.vue";
+
 
 interface IBook {
     name   : string;
@@ -8,6 +10,11 @@ interface IBook {
 }
 
 const RootComponent = vue.defineComponent( {
+
+    components : {
+        OneComponent,
+        OneJsComponent,
+    },
 
     data() {
         return {
@@ -38,8 +45,23 @@ const RootComponent = vue.defineComponent( {
         console.info( "En el hook de beforeMount" );
     },
 
-    template: '<div>hola y adios</div>',
+    template: '<div>hola y adios<OneComponent/><OneJsComponent/></div>',
 
 } );
 
-const vm : vue.ComponentPublicInstance = vue.createApp( RootComponent ).mount( "#bootstrap" );
+//const vm : vue.ComponentPublicInstance = vue.createApp( RootComponent );
+// const vm = vue.createApp( OneComponent );
+
+
+const vm  = vue.createApp( {
+
+    render : () => {
+        return vue.h( RootComponent );
+        // return vue.h( OneComponent );
+        //return vue.h( OneJsComponent );
+        //return vue.h('div', {}, "hola")
+    },
+
+} );
+
+vm.mount( "#bootstrap");

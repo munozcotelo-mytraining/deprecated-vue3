@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "_build": "npm run generate:live; npm run generate:live-source",
-        "build": "npm run generate:live",
+        "build": "npm run generate:dev",
         "watch": "npm run clean:dist; NODE_ENV=production webpack --watch --progress --mode=development --config ./webpack/normal.config.js",
         "clean:test": "rm -rf ./karma-typescript-bundle-*; rm -rf ./ts-node-*; rm -rf ./.nyc_output; rm -rf ./coverage/*",
         "clean:dist": "find ./dist -type f -not -iname source-* -delete",
@@ -18,19 +18,28 @@
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
+    "_dependencies": {
         "typescript": "^4.4.4",
         "vue": "^3.2.21"
     },
     "_devDependencies": {
         "@vue/compiler-sfc": "^3.2.21",
         "ts-loader": "^9.2.6",
-        "typescript": "^4.4.4"
+        "vue-loader": "^16.8.3",
+        "webpack": "^5.64.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-middleware": "^5.2.1",
+        "webpack-hot-middleware": "^2.25.1",
+        "webpack-manifest-plugin": "^4.0.2",
+        "webpack-merge": "^5.8.0"
+    },
+    "dependencies": {
+        "typescript": "^4.4.4",
+        "vue": "^3.2.22"
     },
     "devDependencies": {
-        "@vue/compiler-sfc": "^3.2.21",
         "ts-loader": "^9.2.6",
-        "vue-loader": "^15.9.8",
+        "vue-loader": "^16.8.3",
         "webpack": "^5.64.0",
         "webpack-cli": "^4.9.1",
         "webpack-dev-middleware": "^5.2.1",

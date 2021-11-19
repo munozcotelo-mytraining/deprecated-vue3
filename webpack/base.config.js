@@ -1,6 +1,6 @@
-const path            = require( "path" );
-const VueLoaderPlugin = require( "vue-loader/lib/plugin" );
-const webpack         = require( "webpack" );
+const path                = require( "path" );
+const { VueLoaderPlugin } = require( "vue-loader" );
+const webpack             = require( "webpack" );
 // const { CheckerPlugin } = require( "awesome-typescript-loader" );
 
 const contextPath = path.resolve( __dirname, ".." );
@@ -8,6 +8,7 @@ const distPath    = path.resolve( contextPath, "dist" );
 const srcPath     = path.resolve( contextPath, "src" );
 const configPath  = path.resolve( contextPath, "config" );
 const bannersPath = path.resolve( contextPath, "libs", "banners" );
+//const nodeModules = path.resolve( contextPath, "node_modules" );
 
 /* Customize these values */
 const componentName = "vue-component";
@@ -83,6 +84,7 @@ const configuration = {
         alias : {
             // // 'vue$': path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm.js" ) /* para vue2 */
             "vue$": path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm-bundler.js" ) /* para vue3*/
+
         }
 
 
@@ -94,7 +96,8 @@ const configuration = {
 
             {
 
-                test    : /\.tsx?$/,
+                //test    : /\.tsx?$/,
+                test    : /\.ts$/,
                 include : [
 
                     configPath,
@@ -127,12 +130,12 @@ const configuration = {
                 use     : {
 
                     loader  : "vue-loader",
-                    options : {
+                    /*options : {
 
                         esModule : true,
                         cacheDirectory : true,
 
-                    },
+                    },*/
 
                 },
 
@@ -158,9 +161,19 @@ const configuration = {
 
         new webpack.ids.HashedModuleIdsPlugin(),
 
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__ : true,
+            __VUE_PROD_DEVTOOLS__: true,
+        }),
+
         new VueLoaderPlugin(),
 
     ],
+    /*resolveLoader: {
+        alias: {
+          "vue-loader": path.resolve( nodeModules, "vue-loader"),
+        },
+      },*/
 
 
 };
