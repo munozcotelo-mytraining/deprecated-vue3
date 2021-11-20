@@ -70,19 +70,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "UKq3":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/App.vue?vue&type=script&lang=ts ***!
+  \************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n/* harmony import */ var _logic_components_vue_OneComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logic/components/vue/OneComponent.vue */ \"45wI\");\n\n\nvar App = vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent({\n    name: \"App\",\n    components: {\n        OneComponent: _logic_components_vue_OneComponent_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    },\n    data: function () {\n        return {\n            manolo: 50,\n            book: {\n                name: \"Quijote\",\n                author: \"Cervantes\",\n            },\n        };\n    },\n    beforeCreate: function () {\n        console.info(\"App - En el hook de beforeCreate 1. Todav\\u00EDa no tengo this.book \".concat(this.book));\n    },\n    created: function () {\n        console.info(\"App - En el hook de created. Ya tengo this.book \".concat(this.book));\n    },\n    mounted: function () {\n        console.info(\"App - En el hook de mounted (12)\");\n        console.info(this.book.name);\n    },\n    beforeMount: function () {\n        console.info(\"App - En el hook de beforeMount\");\n    },\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n\n//# sourceURL=webpack://vue3/./src/App.vue?./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+
+/***/ }),
+
 /***/ "qDjZ":
 /*!******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/logic/components/vue/OneComponent.vue?vue&type=script&lang=ts ***!
   \******************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n// export default {\n//     beforeCreate () {\n//         console.info( `En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );\n//     },\n// }\n\nconst OneComponent = vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent({\n    name: \"OneComponent\",\n    data() {\n        return {\n            manolo: 50,\n            book: {\n                name: \"Quijote\",\n                author: \"Cervantes\",\n            },\n        };\n    },\n    beforeCreate() {\n        console.info(`En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}`);\n    },\n    created() {\n        console.info(`En el hook de created. Ya tengo this.book ${this.book}`);\n    },\n    mounted() {\n        console.info(\"En el hook de mounted (12)\");\n        console.info(this.book.name);\n    },\n    beforeMount() {\n        console.info(\"En el hook de beforeMount\");\n    },\n    template: '<div>hola y adios</div>',\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OneComponent);\n\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneComponent.vue?./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n\nvar OneComponent = vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent({\n    name: \"OneComponent\",\n    data: function () {\n        return {\n            manolo: 50,\n            book: {\n                name: \"Quijote\",\n                author: \"Cervantes\",\n            },\n        };\n    },\n    beforeCreate: function () {\n        console.info(\"En el hook de beforeCreate 1. Todav\\u00EDa no tengo this.book \".concat(this.book));\n    },\n    created: function () {\n        console.info(\"En el hook de created. Ya tengo this.book \".concat(this.book));\n    },\n    mounted: function () {\n        console.info(\"En el hook de mounted (12)\");\n        console.info(this.book.name);\n    },\n    beforeMount: function () {\n        console.info(\"En el hook de beforeMount\");\n    },\n    // template: '<div>hola y adios</div>',\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OneComponent);\n\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneComponent.vue?./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
 
 /***/ }),
 
-/***/ "t6xr":
+/***/ "KAfg":
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/App.vue?vue&type=template&id=c953aeac&ts=true ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n\nvar _hoisted_1 = /*#__PURE__*/ (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(\" Hola manolo (6) \");\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n    var _component_OneComponent = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)(\"OneComponent\");\n    return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(\"div\", null, [\n        _hoisted_1,\n        (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_OneComponent)\n    ]));\n}\n\n\n//# sourceURL=webpack://vue3/./src/App.vue?./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet%5B1%5D.rules%5B2%5D!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+
+/***/ }),
+
+/***/ "bXJ4":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/logic/components/vue/OneComponent.vue?vue&type=template&id=5746595f&ts=true ***!
+  !*** ./node_modules/ts-loader/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/logic/components/vue/OneComponent.vue?vue&type=template&id=158493dd&ts=true ***!
   \******************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -96,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n/* harmony import */ var _logic_components_vue_OneComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logic/components/vue/OneComponent.vue */ \"45wI\");\n/* harmony import */ var _logic_components_vue_OneJsComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logic/components/vue/OneJsComponent.vue */ \"q3aL\");\n\n\n\nconst RootComponent = vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent({\n    components: {\n        OneComponent: _logic_components_vue_OneComponent_vue__WEBPACK_IMPORTED_MODULE_1__,\n        OneJsComponent: _logic_components_vue_OneJsComponent_vue__WEBPACK_IMPORTED_MODULE_2__,\n    },\n    data() {\n        return {\n            manolo: 50,\n            book: {\n                name: \"Quijote\",\n                author: \"Cervantes\",\n            },\n        };\n    },\n    beforeCreate() {\n        console.info(`En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}`);\n    },\n    created() {\n        console.info(`En el hook de created. Ya tengo this.book ${this.book}`);\n    },\n    mounted() {\n        console.info(\"En el hook de mounted\");\n        console.info(this.book.name);\n    },\n    beforeMount() {\n        console.info(\"En el hook de beforeMount\");\n    },\n    template: '<div>hola y adios<OneComponent/><OneJsComponent/></div>',\n});\n//const vm : vue.ComponentPublicInstance = vue.createApp( RootComponent );\n// const vm = vue.createApp( OneComponent );\nconst vm = vue__WEBPACK_IMPORTED_MODULE_0__.createApp({\n    render: () => {\n        return vue__WEBPACK_IMPORTED_MODULE_0__.h(RootComponent);\n        // return vue.h( OneComponent );\n        //return vue.h( OneJsComponent );\n        //return vue.h('div', {}, \"hola\")\n    },\n});\nvm.mount(\"#bootstrap\");\n\n\n//# sourceURL=webpack://vue3/./src/main.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue */ \"otbm\");\n\n\nvar vm = vue__WEBPACK_IMPORTED_MODULE_0__.createApp(_App_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n/* Si necesitamos pasar parametros al componente */\n// const vm  = vue.createApp( {\n//\n//     render : () => {\n//         return vue.h( App );\n//     },\n//\n// } );\nvm.mount(\"#bootstrap\");\n\n\n//# sourceURL=webpack://vue3/./src/main.ts?");
 
 /***/ }),
 
@@ -110,33 +130,33 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n// r
 
 /***/ }),
 
+/***/ "otbm":
+/*!*********************!*\
+  !*** ./src/App.vue ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _App_vue_vue_type_template_id_c953aeac_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=c953aeac&ts=true */ \"hKDr\");\n/* harmony import */ var _App_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=ts */ \"pu0G\");\n/* harmony import */ var _root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ \"uaZu\");\n\n\n\n\n;\nconst __exports__ = /*#__PURE__*/(0,_root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_App_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__[\"default\"], [['render',_App_vue_vue_type_template_id_c953aeac_ts_true__WEBPACK_IMPORTED_MODULE_0__.render]])\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);\n\n//# sourceURL=webpack://vue3/./src/App.vue?");
+
+/***/ }),
+
 /***/ "45wI":
 /*!***************************************************!*\
   !*** ./src/logic/components/vue/OneComponent.vue ***!
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _OneComponent_vue_vue_type_template_id_5746595f_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OneComponent.vue?vue&type=template&id=5746595f&ts=true */ \"9Ule\");\n/* harmony import */ var _OneComponent_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OneComponent.vue?vue&type=script&lang=ts */ \"/aD4\");\n/* harmony import */ var _root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ \"uaZu\");\n\n\n\n\n;\nconst __exports__ = /*#__PURE__*/(0,_root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_OneComponent_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__[\"default\"], [['render',_OneComponent_vue_vue_type_template_id_5746595f_ts_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',\"src/logic/components/vue/OneComponent.vue\"]])\n/* hot reload */\nif (false) {}\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneComponent.vue?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _OneComponent_vue_vue_type_template_id_158493dd_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OneComponent.vue?vue&type=template&id=158493dd&ts=true */ \"RKyY\");\n/* harmony import */ var _OneComponent_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OneComponent.vue?vue&type=script&lang=ts */ \"/aD4\");\n/* harmony import */ var _root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ \"uaZu\");\n\n\n\n\n;\nconst __exports__ = /*#__PURE__*/(0,_root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_OneComponent_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__[\"default\"], [['render',_OneComponent_vue_vue_type_template_id_158493dd_ts_true__WEBPACK_IMPORTED_MODULE_0__.render]])\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneComponent.vue?");
 
 /***/ }),
 
-/***/ "q3aL":
-/*!*****************************************************!*\
-  !*** ./src/logic/components/vue/OneJsComponent.vue ***!
-  \*****************************************************/
+/***/ "pu0G":
+/*!*********************************************!*\
+  !*** ./src/App.vue?vue&type=script&lang=ts ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _OneJsComponent_vue_vue_type_template_id_4f4e3016__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OneJsComponent.vue?vue&type=template&id=4f4e3016 */ \"Fi5x\");\n/* harmony import */ var _OneJsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OneJsComponent.vue?vue&type=script&lang=js */ \"ielO\");\n/* harmony import */ var _root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ \"uaZu\");\n\n\n\n\n;\nconst __exports__ = /*#__PURE__*/(0,_root_repos_training_vue3_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_OneJsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], [['render',_OneJsComponent_vue_vue_type_template_id_4f4e3016__WEBPACK_IMPORTED_MODULE_0__.render],['__file',\"src/logic/components/vue/OneJsComponent.vue\"]])\n/* hot reload */\nif (false) {}\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneJsComponent.vue?");
-
-/***/ }),
-
-/***/ "ryU+":
-/*!*************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/logic/components/vue/OneJsComponent.vue?vue&type=script&lang=js ***!
-  \*************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n\n\n    // export default {\n    //     beforeCreate () {\n    //         console.info( `En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );\n    //     },\n    // }\n\n    \n\n    const OneJsComponent = vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent( {\n\n        name: \"OneJsComponent\",\n\n        data() {\n            return {\n                manolo : 50,\n                book   : {\n\n                    name   : \"Quijote\",\n                    author : \"Cervantes\",\n\n                },\n            }\n        },\n\n        beforeCreate () {\n            console.info( `En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );\n        },\n\n        created () {\n            console.info( `En el hook de created. Ya tengo this.book ${this.book}` );\n        },\n\n        mounted () {\n            console.info( \"En el hook de mounted (12)\" );\n            console.info( this.book.name );\n        },\n\n        beforeMount () {\n            console.info( \"En el hook de beforeMount\" );\n        },\n\n        template: '<div>hola y adios</div>',\n\n    } );\n\n    /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OneJsComponent);\n\n\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneJsComponent.vue?./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* reexport safe */ _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_App_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_App_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../node_modules/ts-loader/index.js??clonedRuleSet-1.use!../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./App.vue?vue&type=script&lang=ts */ \"UKq3\");\n \n\n//# sourceURL=webpack://vue3/./src/App.vue?");
 
 /***/ }),
 
@@ -150,43 +170,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "9Ule":
+/***/ "hKDr":
+/*!***********************************************************!*\
+  !*** ./src/App.vue?vue&type=template&id=c953aeac&ts=true ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_App_vue_vue_type_template_id_c953aeac_ts_true__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_App_vue_vue_type_template_id_c953aeac_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../node_modules/ts-loader/index.js??clonedRuleSet-1.use!../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./App.vue?vue&type=template&id=c953aeac&ts=true */ \"KAfg\");\n\n\n//# sourceURL=webpack://vue3/./src/App.vue?");
+
+/***/ }),
+
+/***/ "RKyY":
 /*!*****************************************************************************************!*\
-  !*** ./src/logic/components/vue/OneComponent.vue?vue&type=template&id=5746595f&ts=true ***!
+  !*** ./src/logic/components/vue/OneComponent.vue?vue&type=template&id=158493dd&ts=true ***!
   \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneComponent_vue_vue_type_template_id_5746595f_ts_true__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneComponent_vue_vue_type_template_id_5746595f_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/ts-loader/index.js??clonedRuleSet-1.use!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./OneComponent.vue?vue&type=template&id=5746595f&ts=true */ \"t6xr\");\n\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneComponent.vue?");
-
-/***/ }),
-
-/***/ "ielO":
-/*!*****************************************************************************!*\
-  !*** ./src/logic/components/vue/OneJsComponent.vue?vue&type=script&lang=js ***!
-  \*****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* reexport safe */ _node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneJsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneJsComponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./OneJsComponent.vue?vue&type=script&lang=js */ \"ryU+\");\n \n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneJsComponent.vue?");
-
-/***/ }),
-
-/***/ "Fi5x":
-/*!***********************************************************************************!*\
-  !*** ./src/logic/components/vue/OneJsComponent.vue?vue&type=template&id=4f4e3016 ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneJsComponent_vue_vue_type_template_id_4f4e3016__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneJsComponent_vue_vue_type_template_id_4f4e3016__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./OneJsComponent.vue?vue&type=template&id=4f4e3016 */ \"I4O1\");\n\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneJsComponent.vue?");
-
-/***/ }),
-
-/***/ "I4O1":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/logic/components/vue/OneJsComponent.vue?vue&type=template&id=4f4e3016 ***!
-  \*****************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"8r9s\");\n\n\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(\"div\", null, \"One Js component\"))\n}\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneJsComponent.vue?./node_modules/vue-loader/dist/templateLoader.js??ruleSet%5B1%5D.rules%5B2%5D!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneComponent_vue_vue_type_template_id_158493dd_ts_true__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_ts_loader_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_OneComponent_vue_vue_type_template_id_158493dd_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/ts-loader/index.js??clonedRuleSet-1.use!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./OneComponent.vue?vue&type=template&id=158493dd&ts=true */ \"bXJ4\");\n\n\n//# sourceURL=webpack://vue3/./src/logic/components/vue/OneComponent.vue?");
 
 /***/ }),
 

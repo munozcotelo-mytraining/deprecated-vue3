@@ -161,10 +161,12 @@ const configuration = {
 
         new webpack.ids.HashedModuleIdsPlugin(),
 
-        new webpack.DefinePlugin({
+        new webpack.DefinePlugin( {
+
             __VUE_OPTIONS_API__ : true,
             __VUE_PROD_DEVTOOLS__: true,
-        }),
+
+        } ),
 
         new VueLoaderPlugin(),
 
@@ -179,5 +181,6 @@ const configuration = {
 };
 
 configuration.entry[ componentName ] = path.resolve( srcPath, "main.ts" );
+// configuration.entry[ componentName ] = path.resolve( srcPath, "main.js" );
 
 module.exports = configuration;

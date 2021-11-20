@@ -4,12 +4,6 @@
 
 <script lang="ts">
 
-    // export default {
-    //     beforeCreate () {
-    //         console.info( `En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );
-    //     },
-    // }
-
     import * as vue from "vue";
 
     interface IBook {
@@ -50,7 +44,7 @@
             console.info( "En el hook de beforeMount" );
         },
 
-        template: '<div>hola y adios</div>',
+        // template: '<div>hola y adios</div>',
 
     } );
 
