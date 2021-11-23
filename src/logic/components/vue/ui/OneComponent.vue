@@ -14,7 +14,7 @@
 
 <script lang="ts">
 
-    import OneComponent from "./OneComponent";
-    export default OneComponent;
+import OneComponent from "./../../typescript/ui/OneComponent";
+export default OneComponent;
 
 </script>

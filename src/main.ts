@@ -1,6 +1,6 @@
 import * as vue from "vue";
 
-import App from "./App.vue";
+import App from "./logic/components/App.vue";
 
 const vm = vue.createApp(App);
 

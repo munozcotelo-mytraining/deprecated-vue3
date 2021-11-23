@@ -24,7 +24,7 @@ const OneComponent = vue.defineComponent( {
             manolo : 50 as number,
             book   : {
 
-                name   : "Quijote",
+                name   : "Quijote xx",
                 author : "Cervantes",
 
             } as IBook,

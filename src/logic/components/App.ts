@@ -1,28 +1,6 @@
-<template>
-
-    <div>
-        <p>Hola App</p>
-
-        <!-- como pasar un
-            valor dinamico v-bind:xxx
-            valor dinamico (formato corto) :xxx
-            o estatico
-        -->
-        <OneComponent
-            v-bind:theSurname="book.name"
-            :theName="book.author"
-            theNumber="101"
-        />
-
-    </div>
-
-</template>
-
-<script lang="ts">
-
 import * as vue from "vue";
 
-import OneComponent from "./logic/components/vue/OneComponent.vue";
+import OneComponent from "./vue/ui/OneComponent.vue";
 
 interface IBook {
     name   : string;
@@ -70,6 +48,3 @@ const App = vue.defineComponent( {
 
 export default App;
 
-</script>
-
-<style></style>
