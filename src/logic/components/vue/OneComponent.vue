@@ -1,5 +1,15 @@
 <template>
-    <div>One component</div>
+
+    <div>
+
+        <p>One component</p>
+
+        <p>{{ theName }}</p>
+        <p>{{ theSurname }}</p>
+        <p>{{ theNumber }}</p>
+
+    </div>
+
 </template>
 
 <script lang="ts">
@@ -15,8 +25,18 @@
 
         name: "OneComponent",
 
+        props : {
+
+            theName    : String,
+            theSurname : String,
+            theNumber  : Number,
+
+        },
+
         data() {
+
             return {
+
                 manolo : 50 as number,
                 book   : {
 
@@ -24,7 +44,9 @@
                     author : "Cervantes",
 
                 } as IBook,
+
             }
+
         },
 
         beforeCreate () {
