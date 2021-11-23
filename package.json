@@ -1,0 +1,36 @@
+{
+    "name": "vue3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "_build": "npm run generate:live; npm run generate:live-source",
+        "build": "npm run generate:dev",
+        "watch": "npm run clean:dist; NODE_ENV=production webpack --watch --progress --mode=development --config ./webpack/normal.config.js",
+        "clean:test": "rm -rf ./karma-typescript-bundle-*; rm -rf ./ts-node-*; rm -rf ./.nyc_output; rm -rf ./coverage/*",
+        "clean:dist": "find ./dist -type f -not -iname source-* -delete",
+        "clean:dist:source": "find ./dist -type f -iname source-* -delete",
+        "_generate:dev": "npm run clean:dist; webpack --mode=development --progress --config ./webpack/normal.config.js",
+        "generate:dev": "npm run clean:dist; webpack --mode=development --progress --config ./webpack/webpack-config.js",
+        "generate:dev-source": "npm run clean:dist:source; webpack --mode=development --config ./webpack/source.config.js",
+        "generate:watch-dev-source": "npm run clean:dist:source; webpack --watch --progress --mode=development --config ./webpack/source.config.js",
+        "generate:live": "npm run clean:dist; NODE_ENV=production webpack --mode=production --config ./webpack/normal.config.js",
+        "generate:live-source": "npm run clean:dist:source; NODE_ENV=production webpack --mode=production --config ./webpack/source.config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "typescript": "^4.4.4",
+        "vue": "^3.2.22"
+    },
+    "devDependencies": {
+        "ts-loader": "^9.2.6",
+        "vue-loader": "^16.8.3",
+        "webpack": "^5.64.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-middleware": "^5.2.1",
+        "webpack-hot-middleware": "^2.25.1",
+        "webpack-manifest-plugin": "^4.0.2",
+        "webpack-merge": "^5.8.0"
+    }
+}
