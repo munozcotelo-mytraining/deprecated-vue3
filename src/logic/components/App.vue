@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <p>Hola App</p>
+        <p>Hola {{ title }}</p>
 
         <!-- como pasar un
             valor dinamico v-bind:xxx

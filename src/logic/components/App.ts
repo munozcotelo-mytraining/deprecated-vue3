@@ -11,6 +11,12 @@ const App = vue.defineComponent( {
 
     name: "App",
 
+    props : {
+
+        title : String,
+
+    },
+
     components : {
         OneComponent,
     },
