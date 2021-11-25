@@ -5,6 +5,12 @@ interface IBook {
     author : string;
 }
 
+interface IItem {
+    id      : number,
+    name    : string,
+    visible : boolean,
+};
+
 const OneComponent = vue.defineComponent( {
 
     name: "OneComponent",
@@ -21,13 +27,39 @@ const OneComponent = vue.defineComponent( {
 
         return {
 
-            manolo : 50 as number,
+            contador : 10 as number,
+
+            rawHtml: "<span style=\"color: red\">This should be red.</span>",
+
+            cancelContador : 0 as number,
+
+            myAttribute : "class" as string,
+
+            index : 50 as number,
             book   : {
 
                 name   : "Quijote xx",
                 author : "Cervantes",
 
             } as IBook,
+
+            items: [
+                {
+                    id      : 1,
+                    name    : "uno",
+                    visible : true,
+                },
+                {
+                    id      : 2,
+                    name    : "dos",
+                    visible : true,
+                },
+                {
+                    id      : 3,
+                    name    : "tres",
+                    visible : false,
+                }
+            ] as IItem[],
 
         }
 
@@ -42,12 +74,28 @@ const OneComponent = vue.defineComponent( {
     },
 
     mounted () {
+
         console.info( "En el hook de mounted (12)" );
         console.info( this.book.name );
+
+        const me = this;
+
+        this.cancelContador = setInterval ( () => {
+            this.contador +=1;
+        }, 2000 );
+
     },
 
     beforeMount () {
         console.info( "En el hook de beforeMount" );
+    },
+
+    beforeUnMount () {
+
+        console.info( "En el hook de beforeMount" );
+
+        clearInterval( this.cancelContador );
+
     },
 
     // template: '<div>hola y adios</div>',
