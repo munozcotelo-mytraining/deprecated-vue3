@@ -27,10 +27,10 @@ const configuration = {
         pathinfo      : true,
         path          : distPath,
         publicPath    : "/dist/",
-        filename      : "vue3.js",
-        // chunkFilename : "[name]-[contenthash].bundle.js",
-        // filename      : "[name]-[contenthash].js",
-        // jsonpFunction : "webpackJsonp" + jsonpName,
+        // filename      : "vue3.js",
+        chunkFilename : "[name]-[contenthash].bundle.js",
+        filename      : "[name]-[contenthash].js",
+        uniqueName : "webpackJsonp" + jsonpName,
 
     },
 
@@ -41,34 +41,34 @@ const configuration = {
 
     },
 
-    // optimization : {
-    //
-    //     runtimeChunk : {
-    //         name : entrypoint => `runtime-${entrypoint.name}`,
-    //     },
-    //
-    //     splitChunks : {
-    //
-    //         cacheGroups : {
-    //
-    //             vendor : {
-    //                 test      : /[\\/]node_modules[\\/]/,
-    //                 name      : "vendor-" + componentName,
-    //                 chunks    : "all",
-    //             },
-    //
-    //             config : {
-    //                 test    : /[\\/]config[\\/]/,
-    //                 name    : "config-" + componentName,
-    //                 minSize : 500,
-    //                 chunks  : "all",
-    //             },
-    //
-    //         },
-    //
-    //     },
-    //
-    // },
+    optimization : {
+
+        runtimeChunk : {
+            name : entrypoint => `runtime-${entrypoint.name}`,
+        },
+
+        splitChunks : {
+
+            cacheGroups : {
+
+                vendor : {
+                    test      : /[\\/]node_modules[\\/]/,
+                    name      : "vendor-" + componentName,
+                    chunks    : "all",
+                },
+
+                config : {
+                    test    : /[\\/]config[\\/]/,
+                    name    : "config-" + componentName,
+                    minSize : 500,
+                    chunks  : "all",
+                },
+
+            },
+
+        },
+
+    },
 
     resolve : {
         extensions : [ ".ts", ".tsx", ".js", ".vue" ],
@@ -82,7 +82,7 @@ const configuration = {
          *  con el alias -> no se neceisa vue-loader. Podemos crear componentes que sean simplemente .ts con la propiedad 'template' ( o funcion 'render', si nos gusta mas )
          */
         alias : {
-            // // 'vue$': path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm.js" ) /* para vue2 */
+            // 'vue$': path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm.js" ) /* para vue2 */
             "vue$": path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm-bundler.js" ) /* para vue3*/
 
         }
@@ -96,8 +96,7 @@ const configuration = {
 
             {
 
-                //test    : /\.tsx?$/,
-                test    : /\.ts$/,
+                test    : /\.tsx?$/,
                 include : [
 
                     configPath,
@@ -130,12 +129,12 @@ const configuration = {
                 use     : {
 
                     loader  : "vue-loader",
-                    /*options : {
+                    options : {
 
                         esModule : true,
                         cacheDirectory : true,
 
-                    },*/
+                    },
 
                 },
 
@@ -171,16 +170,10 @@ const configuration = {
         new VueLoaderPlugin(),
 
     ],
-    /*resolveLoader: {
-        alias: {
-          "vue-loader": path.resolve( nodeModules, "vue-loader"),
-        },
-      },*/
 
 
 };
 
 configuration.entry[ componentName ] = path.resolve( srcPath, "main.ts" );
-// configuration.entry[ componentName ] = path.resolve( srcPath, "main.js" );
 
 module.exports = configuration;

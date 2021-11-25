@@ -1,0 +1,14 @@
+{
+  "vue-component.js": {
+    "index": 2000,
+    "path": "vue-component-61dc442be706bcd95279.js"
+  },
+  "vendor-vue-component.js": {
+    "index": 1000,
+    "path": "vendor-vue-component-d24090a4b4e09443637f.js"
+  },
+  "runtime-vue-component.js": {
+    "index": 500,
+    "path": "runtime-vue-component-d20e867ca1941642733d.js"
+  }
+}

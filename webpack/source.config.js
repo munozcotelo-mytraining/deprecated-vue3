@@ -1,6 +1,7 @@
-const merge          = require( "webpack-merge" );
-const TerserPlugin   = require( "terser-webpack-plugin" );
-const ManifestPlugin = require( "webpack-manifest-plugin" );
+const merge             = require( "webpack-merge" );
+const TerserPlugin      = require( "terser-webpack-plugin" );
+const ManifestPlugin    = require( "webpack-manifest-plugin" );
+const HtmlWebpackPlugin = require( "html-webpack-plugin" );
 
 const baseConfig = require( "./base.config.js" );
 const manifestConfiguration = require( "./manifestFiles.js" );
@@ -40,8 +41,7 @@ const mergedConfiguration = merge( baseConfig, {
                 test          : /\.js($|\?)/i,
                 cache         : true,
                 exclude       : /\/node_modules/,
-                parallel      : true,
-                sourceMap     : true,
+                parallel      : true, sourceMap     : true,
                 terserOptions : {
 
                     warnings : false,
@@ -58,6 +58,19 @@ const mergedConfiguration = merge( baseConfig, {
     },
 
     plugins : [
+
+        /*
+         * https://webpack.js.org/guides/code-splitting/
+         * https://github.com/jantimon/html-webpack-plugin#configuration
+         * https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs#L56-L58
+         * */
+        new HtmlWebpackPlugin( {
+
+            filename : "./../index-map.html",
+            template : "./src/index-template.html",
+            inject   : false,
+
+        } ),
 
         new ManifestPlugin( {
 

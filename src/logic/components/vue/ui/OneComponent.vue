@@ -2,7 +2,7 @@
 
     <div>
 
-        <p>One component (2)</p>
+        <p>One component (4)</p>
 
         <p>{{ theName }}</p>
         <p>{{ theSurname }}</p>

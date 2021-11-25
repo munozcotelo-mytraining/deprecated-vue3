@@ -10,8 +10,8 @@
         "clean:test": "rm -rf ./karma-typescript-bundle-*; rm -rf ./ts-node-*; rm -rf ./.nyc_output; rm -rf ./coverage/*",
         "clean:dist": "find ./dist -type f -not -iname source-* -delete",
         "clean:dist:source": "find ./dist -type f -iname source-* -delete",
-        "_generate:dev": "npm run clean:dist; webpack --mode=development --progress --config ./webpack/normal.config.js",
-        "generate:dev": "npm run clean:dist; webpack --mode=development --progress --config ./webpack/webpack-config.js",
+        "generate:dev": "npm run clean:dist; webpack --mode=development --progress --config ./webpack/normal.config.js",
+        "_generate:dev": "npm run clean:dist; webpack --mode=development --progress --config ./webpack/webpack-config.js",
         "generate:dev-source": "npm run clean:dist:source; webpack --mode=development --config ./webpack/source.config.js",
         "generate:watch-dev-source": "npm run clean:dist:source; webpack --watch --progress --mode=development --config ./webpack/source.config.js",
         "generate:live": "npm run clean:dist; NODE_ENV=production webpack --mode=production --config ./webpack/normal.config.js",
@@ -24,6 +24,7 @@
         "vue": "^3.2.22"
     },
     "devDependencies": {
+        "html-webpack-plugin": "^5.5.0",
         "ts-loader": "^9.2.6",
         "vue-loader": "^16.8.3",
         "webpack": "^5.64.0",

@@ -47,4 +47,3 @@ const App = vue.defineComponent( {
 } );
 
 export default App;
-
