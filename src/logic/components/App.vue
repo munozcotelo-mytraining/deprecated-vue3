@@ -12,6 +12,7 @@
             v-bind:theSurname="book.name"
             :theName="book.author"
             theNumber="101"
+            v-bind:theBook="book"
         />
 
     </div>

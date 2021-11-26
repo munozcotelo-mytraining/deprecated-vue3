@@ -6,12 +6,25 @@ interface IBook {
 }
 
 interface IItem {
-    id      : number,
-    name    : string,
-    visible : boolean,
-};
 
-const OneComponent = vue.defineComponent( {
+    id      : number;
+    name    : string;
+    visible : boolean;
+
+}
+
+interface IData {
+
+    contador       : number,
+    rawHtml        : string,
+    cancelContador : number,
+    myAttribute    : string,
+    index          : number,
+    items          : IItem[],
+
+}
+
+const OneComponent : vue.DefineComponent = vue.defineComponent( {
 
     name: "OneComponent",
 
@@ -20,28 +33,23 @@ const OneComponent = vue.defineComponent( {
         theName    : String,
         theSurname : String,
         theNumber  : Number,
+        theBook    : Object as vue.PropType<IBook>,
 
     },
 
-    data() {
+    data () : IData {
 
         return {
 
             contador : 10 as number,
 
-            rawHtml: "<span style=\"color: red\">This should be red.</span>",
+            rawHtml: "<span style=\"color: red\">This should be red.</span>" as string,
 
             cancelContador : 0 as number,
 
             myAttribute : "class" as string,
 
             index : 50 as number,
-            book   : {
-
-                name   : "Quijote xx",
-                author : "Cervantes",
-
-            } as IBook,
 
             items: [
                 {
@@ -61,38 +69,49 @@ const OneComponent = vue.defineComponent( {
                 }
             ] as IItem[],
 
-        }
+        };
 
     },
 
-    beforeCreate () {
-        console.info( `En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );
+    methods : {
+
+        increment () : void {
+
+            const me = this;
+
+            me.index +=1;
+
+        },
+
     },
 
-    created () {
-        console.info( `En el hook de created. Ya tengo this.book ${this.book}` );
+    beforeCreate () : void {
+        console.info( `OneComponent. En el hook de beforeCreate 1. Ya tengo this.theBook ${this.theBook}` );
     },
 
-    mounted () {
+    created () : void {
+        console.info( `OneComponent. En el hook de created. Ya tengo this.theBook ${this.theBook}` );
+    },
 
-        console.info( "En el hook de mounted (12)" );
-        console.info( this.book.name );
+    mounted () : void {
+
+        console.info( "OneComponent. En el hook de mounted" );
 
         const me = this;
 
-        this.cancelContador = setInterval ( () => {
-            this.contador +=1;
+        me.cancelContador = setInterval ( () => {
+            me.contador +=1;
         }, 2000 );
 
     },
 
-    beforeMount () {
-        console.info( "En el hook de beforeMount" );
+    beforeMount () : void {
+        console.info( "OneComponent. En el hook de beforeMount" );
     },
 
-    beforeUnMount () {
+    beforeUnMount () : void {
 
-        console.info( "En el hook de beforeMount" );
+        console.info( "OneComponent. En el hook de beforeMount" );
 
         clearInterval( this.cancelContador );
 

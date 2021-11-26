@@ -32,6 +32,8 @@
             </li>
         </ul>
 
+        <button v-on:click="increment">Click {{ index }}</button>
+
     </div>
 
 </template>

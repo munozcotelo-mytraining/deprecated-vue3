@@ -3,11 +3,20 @@ import * as vue from "vue";
 import OneComponent from "./vue/ui/OneComponent.vue";
 
 interface IBook {
+
     name   : string;
     author : string;
+
 }
 
-const App = vue.defineComponent( {
+interface IData {
+
+    manolo : number;
+    book   : IBook;
+
+}
+
+const App : vue.DefineComponent = vue.defineComponent( {
 
     name: "App",
 
@@ -21,8 +30,10 @@ const App = vue.defineComponent( {
         OneComponent,
     },
 
-    data() {
+    data () : IData {
+
         return {
+
             manolo : 50 as number,
             book   : {
 
@@ -30,23 +41,25 @@ const App = vue.defineComponent( {
                 author : "Cervantes",
 
             } as IBook,
+
         }
+
     },
 
-    beforeCreate () {
+    beforeCreate () : void {
         console.info( `App - En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );
     },
 
-    created () {
+    created () : void {
         console.info( `App - En el hook de created. Ya tengo this.book ${this.book}` );
     },
 
-    mounted () {
+    mounted () : void {
         console.info( "App - En el hook de mounted (12)" );
         console.info( this.book.name );
     },
 
-    beforeMount () {
+    beforeMount () : void {
         console.info( "App - En el hook de beforeMount" );
     },
 
