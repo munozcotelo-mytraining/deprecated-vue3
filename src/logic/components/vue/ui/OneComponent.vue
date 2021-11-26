@@ -38,6 +38,13 @@
         <p>Variable computada compleja (fullName) {{ fullName }} = {{ nombre }} concatenado con {{ apellido }}</p>
         <button v-on:click="changeFullName( 'Fulanito Perez' )">Cambiar fullName</button>
 
+        <p>
+            <label for="question">Escribe una pregunta (who are you?)</label>
+            <input type="text" name="question" v-model="question" />
+            <br/>
+            Respuesta: {{ answer }}
+        </p>
+
     </div>
 
 </template>

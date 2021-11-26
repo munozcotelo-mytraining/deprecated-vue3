@@ -29,12 +29,14 @@ interface IProps {
 interface IData {
 
     apellido       : string,
+    answer         : string,
     cancelContador : Timer,
     contador       : number,
     index          : number,
     items          : IItem[],
     myAttribute    : string,
     nombre         : string,
+    question       : string,
     rawHtml        : string,
 
 }
@@ -49,6 +51,7 @@ interface IComputed {
 interface IMethod  {
 
     changeFullName : () => void;
+    getAnswer      : () => void;
     increment      : () => void;
 
 }
@@ -79,7 +82,6 @@ const OneComponent  = vue.defineComponent( {
 
             apellido : "tres" as string,
 
-
             rawHtml: "<span style=\"color: red\">This should be red.</span>" as string,
 
             cancelContador : null,
@@ -106,6 +108,9 @@ const OneComponent  = vue.defineComponent( {
                 }
             ] as IItem[],
 
+            question : "" as string,
+            answer : "" as string,
+
         };
 
     },
@@ -116,7 +121,7 @@ const OneComponent  = vue.defineComponent( {
 
             const me : IComponent = this;
 
-            return this.index + this.contador;
+            return me.index + me.contador;
 
         },
 
@@ -144,6 +149,20 @@ const OneComponent  = vue.defineComponent( {
 
     },
 
+    watch: {
+
+        question( newQuestion : string, oldQuestion : string ) {
+
+            const me : IComponent = this;
+
+            if ( newQuestion.indexOf( "?" ) > -1 ) {
+                me.getAnswer()
+            }
+
+        }
+
+    },
+
     methods : {
 
         increment () : void {
@@ -156,11 +175,21 @@ const OneComponent  = vue.defineComponent( {
 
         changeFullName ( fullName : string ) : void {
 
-            console.info( fullName );
-
             const me : IComponent = this;
 
             me.fullName = fullName;
+
+        },
+
+        getAnswer( ) : void {
+
+            const me : IComponent = this;
+
+            me.answer ="Estoy pensando...";
+
+            setTimeout( () => {
+                me.answer = `Random answer ${ Math.random() }`;
+            }, 2500 );
 
         },
 
