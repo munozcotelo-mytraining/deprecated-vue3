@@ -34,6 +34,10 @@
 
         <button v-on:click="increment">Click {{ index }}</button>
 
+        <p>Variable computada (indexPlusContador) {{ indexPlusContador }}</p>
+        <p>Variable computada compleja (fullName) {{ fullName }} = {{ nombre }} concatenado con {{ apellido }}</p>
+        <button v-on:click="changeFullName( 'Fulanito Perez' )">Cambiar fullName</button>
+
     </div>
 
 </template>

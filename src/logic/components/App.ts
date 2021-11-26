@@ -16,7 +16,8 @@ interface IData {
 
 }
 
-const App : vue.DefineComponent = vue.defineComponent( {
+// const App : vue.DefineComponent = vue.defineComponent( {
+const App = vue.defineComponent( {
 
     name: "App",
 

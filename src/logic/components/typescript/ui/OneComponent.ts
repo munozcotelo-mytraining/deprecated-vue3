@@ -1,8 +1,12 @@
 import * as vue from "vue";
 
+type Timer = ReturnType<typeof setInterval> | null;
+
 interface IBook {
-    name   : string;
+
     author : string;
+    name   : string;
+
 }
 
 interface IItem {
@@ -13,18 +17,46 @@ interface IItem {
 
 }
 
-interface IData {
+interface IProps {
 
-    contador       : number,
-    rawHtml        : string,
-    cancelContador : number,
-    myAttribute    : string,
-    index          : number,
-    items          : IItem[],
+    theBook    : IBook,
+    theName    : string,
+    theNumber  : number,
+    theSurname : string,
 
 }
 
-const OneComponent : vue.DefineComponent = vue.defineComponent( {
+interface IData {
+
+    apellido       : string,
+    cancelContador : Timer,
+    contador       : number,
+    index          : number,
+    items          : IItem[],
+    myAttribute    : string,
+    nombre         : string,
+    rawHtml        : string,
+
+}
+
+interface IComputed {
+
+    fullName          : string;
+    indexPlusContador : number;
+
+}
+
+interface IMethod  {
+
+    changeFullName : () => void;
+    increment      : () => void;
+
+}
+
+interface IComponent extends IProps, IData, IMethod, IComputed { }
+
+// const OneComponent : vue.DefineComponent = vue.defineComponent<{}, {}, {}, {}>( {
+const OneComponent  = vue.defineComponent( {
 
     name: "OneComponent",
 
@@ -43,9 +75,14 @@ const OneComponent : vue.DefineComponent = vue.defineComponent( {
 
             contador : 10 as number,
 
+            nombre : "Vue" as string,
+
+            apellido : "tres" as string,
+
+
             rawHtml: "<span style=\"color: red\">This should be red.</span>" as string,
 
-            cancelContador : 0 as number,
+            cancelContador : null,
 
             myAttribute : "class" as string,
 
@@ -73,13 +110,57 @@ const OneComponent : vue.DefineComponent = vue.defineComponent( {
 
     },
 
+    computed : {
+
+        indexPlusContador () : number {
+
+            const me : IComponent = this;
+
+            return this.index + this.contador;
+
+        },
+
+        fullName : {
+
+            get () : string {
+
+                const me : IComponent = this;
+                return `${ me.nombre } ${me.apellido }`;
+
+            },
+
+            set ( fullName : string ) : void {
+
+                const me : IComponent = this;
+
+                const partes : string[] = fullName.split( " " );
+
+                me.nombre    = partes[ 1 ];
+                me.apellido = partes[ 0 ];
+
+            },
+
+        },
+
+    },
+
     methods : {
 
         increment () : void {
 
-            const me = this;
+            const me : IComponent = this;
 
             me.index +=1;
+
+        },
+
+        changeFullName ( fullName : string ) : void {
+
+            console.info( fullName );
+
+            const me : IComponent = this;
+
+            me.fullName = fullName;
 
         },
 
@@ -97,7 +178,7 @@ const OneComponent : vue.DefineComponent = vue.defineComponent( {
 
         console.info( "OneComponent. En el hook de mounted" );
 
-        const me = this;
+        const me : IComponent = this;
 
         me.cancelContador = setInterval ( () => {
             me.contador +=1;
