@@ -1,6 +1,8 @@
 <template>
 
-    <div>
+    <div class="component">
+
+        <h2>One Component</h2>
 
         <p>One component (1)</p>
 

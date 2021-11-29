@@ -1,6 +1,7 @@
 import * as vue from "vue";
 
-import OneComponent from "./vue/ui/OneComponent.vue";
+import OneComponent           from "./vue/ui/OneComponent.vue";
+import CommunicationComponent from "./vue/ui/CommunicationComponent.vue";
 
 interface IBook {
 
@@ -11,10 +12,21 @@ interface IBook {
 
 interface IData {
 
-    manolo : number;
-    book   : IBook;
+    book            : IBook;
+    clicksOnButton1 : number,
+    clicksOnButton2 : number,
+    clicksOnButton3 : number,
+    manolo          : number;
 
 }
+
+interface IMethod  {
+
+    callbackForButton : () => void;
+
+}
+
+interface IComponent extends IData, IMethod { }
 
 // const App : vue.DefineComponent = vue.defineComponent( {
 const App = vue.defineComponent( {
@@ -28,7 +40,10 @@ const App = vue.defineComponent( {
     },
 
     components : {
+
         OneComponent,
+        CommunicationComponent,
+
     },
 
     data () : IData {
@@ -43,7 +58,49 @@ const App = vue.defineComponent( {
 
             } as IBook,
 
+            clicksOnButton1 : 0 as number,
+            clicksOnButton2 : 0 as number,
+            clicksOnButton3 : 0 as number,
+
         }
+
+    },
+
+    methods : {
+
+        callbackForButton () : void {
+
+            const me : IComponent = this;
+
+            me.clicksOnButton1 +=1;
+
+            console.info( "Han hecho click en button (1) de CommunicationComponent." );
+
+        },
+
+        eventForButton1 ( data : unknown ) : void {
+
+            console.info( arguments );
+            const me : IComponent = this;
+
+            me.clicksOnButton2 +=1;
+
+            console.info( "Han hecho click en button (2) de CommunicationComponent." );
+            console.info( "... with data ", data );
+
+        },
+
+        eventForButton2 ( data : unknown ) : void {
+
+            console.info( arguments );
+            const me : IComponent = this;
+
+            me.clicksOnButton3 +=1;
+
+            console.info( "Han hecho click en button (3) de CommunicationComponent." );
+            console.info( "... with data ", data );
+
+        },
 
     },
 

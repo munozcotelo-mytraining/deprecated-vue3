@@ -109,6 +109,7 @@ const OneComponent  = vue.defineComponent( {
             ] as IItem[],
 
             question : "" as string,
+
             answer : "" as string,
 
         };
@@ -149,7 +150,7 @@ const OneComponent  = vue.defineComponent( {
 
     },
 
-    watch: {
+    watch : {
 
         question( newQuestion : string, oldQuestion : string ) {
 
@@ -169,7 +170,7 @@ const OneComponent  = vue.defineComponent( {
 
             const me : IComponent = this;
 
-            me.index +=1;
+            me.index += 1;
 
         },
 

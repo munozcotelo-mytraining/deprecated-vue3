@@ -1,7 +1,23 @@
 <template>
 
-    <div>
+    <div class="component">
+
+        <h2>App Component</h2>
+
         <p>Hola {{ title }}</p>
+
+        <div>
+            <p>Clicks on button1 inside CommunicationComponent : {{ clicksOnButton1 }}</p>
+            <p>Clicks on button2 inside CommunicationComponent : {{ clicksOnButton2 }}</p>
+            <p>Clicks on button3 inside CommunicationComponent : {{ clicksOnButton3 }}</p>
+        </div>
+
+        <CommunicationComponent
+            v-bind:callback="callbackForButton"
+            @eventForClicking1="eventForButton1"
+            @eventForClicking2="eventForButton2"
+        />
+        <!-- @event-for-clicking="eventForButton" -->
 
         <!-- como pasar un
             valor dinamico v-bind:xxx
