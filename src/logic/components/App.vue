@@ -64,10 +64,13 @@
         <CommunicationComponent
             class="clean"
             v-bind:callback="callbackForButton"
-            @eventForClicking1="eventForButton1"
-            @eventForClicking2="eventForButton2"
+            v-on:eventForClicking1="eventForButton1"
+            v-on:eventForClicking2="eventForButton2"
         />
-        <!-- @event-for-clicking="eventForButton" -->
+            <!-- @eventForClicking1="eventForButton1" -->
+            <!-- @eventForClicking2="eventForButton2" -->
+            <!-- @event-for-clicking1="eventForButton1" -->
+            <!-- @event-for-clicking2="eventForButton2" -->
 
         <!-- como pasar un
             valor dinamico v-bind:xxx
