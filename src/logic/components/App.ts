@@ -1,6 +1,7 @@
 import * as vue from "vue";
 
 import CommunicationComponent from "./vue/ui/CommunicationComponent.vue";
+import DynamicComponents      from "./vue/ui/DynamicComponents.vue";
 import OneComponent           from "./vue/ui/OneComponent.vue";
 import SlotComponent          from "./vue/ui/SlotComponent.vue";
 
@@ -50,6 +51,7 @@ const App = vue.defineComponent( {
     components : {
 
         CommunicationComponent,
+        DynamicComponents,
         OneComponent,
         SlotComponent,
 

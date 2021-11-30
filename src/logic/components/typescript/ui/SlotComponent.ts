@@ -4,6 +4,14 @@ interface IProps {
 }
 
 interface IData {
+
+    info  : {
+
+        propA : string;
+        propB : string;
+
+    };
+
 }
 
 interface IComputed {

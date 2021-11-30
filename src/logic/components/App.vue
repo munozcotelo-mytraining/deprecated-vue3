@@ -12,6 +12,8 @@
             <p>Clicks on button3 inside CommunicationComponent : {{ clicksOnButton3 }}</p>
         </div>
 
+        <DynamicComponents/>
+
         <div class="container">
 
             <SlotComponent/>
