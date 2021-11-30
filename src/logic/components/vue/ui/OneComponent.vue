@@ -23,12 +23,21 @@
         <p v-once>Evito reactividad: {{ contador }}</p>
 
         <!-- Loops -->
-        <ul v-for="item in items">
+        <p>Loop over items</p>
+        <ul v-for="item in items" v-bind:key="item.id">
             <li>
                 {{ item.id }} - {{ item.name }}
                 <!-- Conditional -->
                 <span v-if="item.visible === true "> (es visible )</span>
                 <span v-else> (NO es visible )</span>
+            </li>
+        </ul>
+
+        <!-- Loop over object -->
+        <p>Loop over objects</p>
+        <ul v-for="( value, property ) in book">
+            <li>
+                <strong>property</strong>: {{ property }} - <strong>value</strong> : {{ value }}
             </li>
         </ul>
 
