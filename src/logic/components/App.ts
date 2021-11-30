@@ -126,20 +126,20 @@ const App = vue.defineComponent( {
     },
 
     beforeCreate () : void {
-        console.info( `App - En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}` );
+        console.info( `App - En el hook de beforeCreate 1. Todavía no tengo this.book ${this.book}`, this.slotName );
     },
 
     created () : void {
-        console.info( `App - En el hook de created. Ya tengo this.book ${this.book}` );
+        console.info( `App - En el hook de created. Ya tengo this.book ${this.book}`, this.slotName );
     },
 
     mounted () : void {
-        console.info( "App - En el hook de mounted (12)" );
+        console.info( "App - En el hook de mounted (12)", this.slotName );
         console.info( this.book.name );
     },
 
     beforeMount () : void {
-        console.info( "App - En el hook de beforeMount" );
+        console.info( "App - En el hook de beforeMount", this.slotName );
     },
 
 } );

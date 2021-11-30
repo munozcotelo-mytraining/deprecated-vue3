@@ -51,7 +51,7 @@
                 <!--     {{ item.content }} -->
                 <!-- </template> -->
 
-                <template v-slot:[juan]>
+                <template v-slot:[slotName]>
 
                     {{ theSlots[0].content }}
 

@@ -9,7 +9,23 @@
             <button v-on:click="changeComponent( 'component2' )">Change to component 2</button>
         </div>
 
-        <component :is="componentName" />
+        <div>
+            <p>Sin keep-alive</p>
+            <component
+                :is="componentName"
+                tag="sinkeepalive"
+            />
+        </div>
+
+        <div>
+            <p>Con keep-alive</p>
+            <keep-alive>
+                <component
+                    :is="componentName"
+                    tag="conkeepalive"
+                />
+            </keep-alive>
+        </div>
 
     </div>
 
