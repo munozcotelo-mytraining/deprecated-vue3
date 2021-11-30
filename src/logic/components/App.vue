@@ -12,7 +12,55 @@
             <p>Clicks on button3 inside CommunicationComponent : {{ clicksOnButton3 }}</p>
         </div>
 
+        <div class="container">
+
+            <SlotComponent/>
+
+            <SlotComponent>
+
+                <div>
+                    <p>Hola. Esto es contenido desde el component padre</p>
+                    <p>Clicks on button1 inside CommunicationComponent : {{ clicksOnButton1 }}</p>
+                    <p>Clicks on button2 inside CommunicationComponent : {{ clicksOnButton2 }}</p>
+                    <p>Clicks on button3 inside CommunicationComponent : {{ clicksOnButton3 }}</p>
+                </div>
+
+            </SlotComponent>
+
+            <SlotComponent>
+
+                <template v-slot:header>
+                    <h3>Cabecera pintada desde el padre</h3>
+                </template>
+
+                <div>
+                    <p>Hola. Esto es contenido desde el component padre</p>
+                    <p>Clicks on button1 inside CommunicationComponent : {{ clicksOnButton1 }}</p>
+                    <p>Clicks on button2 inside CommunicationComponent : {{ clicksOnButton2 }}</p>
+                    <p>Clicks on button3 inside CommunicationComponent : {{ clicksOnButton3 }}</p>
+                </div>
+
+                <template v-slot:footer="propsInSlot" >
+                    <h3>Footer pintado desde el padre</h3>
+                    <h4>Acceso al elemento del hijo {{ propsInSlot.info}}</h4>
+                </template>
+
+                <!-- <template v-for="item in theSlots"  v-slot:[item.name]> -->
+                <!--     {{ item.content }} -->
+                <!-- </template> -->
+
+                <template v-slot:[juan]>
+
+                    {{ theSlots[0].content }}
+
+                </template>
+
+            </SlotComponent>
+
+        </div>
+
         <CommunicationComponent
+            class="clean"
             v-bind:callback="callbackForButton"
             @eventForClicking1="eventForButton1"
             @eventForClicking2="eventForButton2"

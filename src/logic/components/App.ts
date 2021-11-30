@@ -1,7 +1,8 @@
 import * as vue from "vue";
 
-import OneComponent           from "./vue/ui/OneComponent.vue";
 import CommunicationComponent from "./vue/ui/CommunicationComponent.vue";
+import OneComponent           from "./vue/ui/OneComponent.vue";
+import SlotComponent          from "./vue/ui/SlotComponent.vue";
 
 interface IBook {
 
@@ -10,13 +11,20 @@ interface IBook {
 
 }
 
+interface ISlot {
+    name    : string;
+    content : string;
+}
+
 interface IData {
 
     book            : IBook;
     clicksOnButton1 : number,
     clicksOnButton2 : number,
     clicksOnButton3 : number,
-    manolo          : number;
+    aNumber         : number;
+    theSlots        : ISlot[];
+    slotName        : string;
 
 }
 
@@ -41,8 +49,9 @@ const App = vue.defineComponent( {
 
     components : {
 
-        OneComponent,
         CommunicationComponent,
+        OneComponent,
+        SlotComponent,
 
     },
 
@@ -50,7 +59,8 @@ const App = vue.defineComponent( {
 
         return {
 
-            manolo : 50 as number,
+            aNumber : 50 as number,
+
             book   : {
 
                 name   : "Quijote",
@@ -61,6 +71,15 @@ const App = vue.defineComponent( {
             clicksOnButton1 : 0 as number,
             clicksOnButton2 : 0 as number,
             clicksOnButton3 : 0 as number,
+
+            slotName : "slot1" as string,
+
+            theSlots : [
+
+                { name : "slot1", content: "contenido slot1 desde el padre" },
+                { name : "slot2", content: "contenido slot2 desde el padre" },
+
+            ] as ISlot[],
 
         }
 

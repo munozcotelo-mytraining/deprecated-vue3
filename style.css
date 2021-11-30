@@ -4,3 +4,12 @@
     margin  : 2px;
 
 }
+
+.half {
+    width : 32%;
+    float : left;
+}
+
+.clean {
+    clear  : both;
+}
