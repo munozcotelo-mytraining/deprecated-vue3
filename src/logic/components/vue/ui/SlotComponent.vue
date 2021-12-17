@@ -38,5 +38,3 @@ import SlotComponent from "./../../typescript/ui/SlotComponent";
 export default SlotComponent;
 
 </script>
-
-

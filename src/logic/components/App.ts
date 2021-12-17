@@ -1,11 +1,12 @@
 import * as vue from "vue";
 
-import CommunicationComponent from "./vue/ui/CommunicationComponent.vue";
-import DynamicComponents      from "./vue/ui/DynamicComponents.vue";
-import MonoRootComponent      from "./vue/ui/MonoRootComponent.vue";
-import MultiRootComponent     from "./vue/ui/MultiRootComponent.vue";
-import OneComponent           from "./vue/ui/OneComponent.vue";
-import SlotComponent          from "./vue/ui/SlotComponent.vue";
+import CommunicationComponent    from "./vue/ui/CommunicationComponent.vue";
+import DynamicComponents         from "./vue/ui/DynamicComponents.vue";
+import MonoRootComponent         from "./vue/ui/MonoRootComponent.vue";
+import MultiRootComponent        from "./vue/ui/MultiRootComponent.vue";
+import OneComponent              from "./vue/ui/OneComponent.vue";
+import ProvideAndInjectComponent from "./vue/ui/ProvideAndInjectComponent.vue";
+import SlotComponent             from "./vue/ui/SlotComponent.vue";
 
 interface IBook {
 
@@ -56,6 +57,7 @@ const App = vue.defineComponent( {
         DynamicComponents,
         MonoRootComponent,
         MultiRootComponent,
+        ProvideAndInjectComponent,
         OneComponent,
         SlotComponent,
 

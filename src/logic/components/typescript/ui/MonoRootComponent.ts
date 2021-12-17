@@ -44,6 +44,3 @@ const MonoRootComponent  = vue.defineComponent( {
 } );
 
 export default MonoRootComponent;
-
-
-

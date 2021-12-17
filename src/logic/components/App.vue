@@ -6,18 +6,20 @@
 
         <p>Hola {{ title }}</p>
 
-        <MonoRootComponent
-            tag="tag-from-parent"
-            notag="no-tag-from-parent"
-            class="my-class-1"
-        />
-        <MultiRootComponent
-            tag="tag-from-parent"
-            notag="no-tag-from-parent"
-            class="my-class-1"
-        />
+        <ProvideAndInjectComponent/>
 
         <div v-show="false">
+
+            <MonoRootComponent
+                tag="tag-from-parent"
+                notag="no-tag-from-parent"
+                class="my-class-1"
+            />
+            <MultiRootComponent
+                tag="tag-from-parent"
+                notag="no-tag-from-parent"
+                class="my-class-1"
+            />
 
             <div>
                 <p>Clicks on button1 inside CommunicationComponent : {{ clicksOnButton1 }}</p>
