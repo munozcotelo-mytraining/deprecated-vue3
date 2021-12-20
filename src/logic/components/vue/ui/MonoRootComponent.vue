@@ -12,5 +12,3 @@ import MonoRootComponent from "./../../typescript/ui/MonoRootComponent";
 export default MonoRootComponent;
 
 </script>
-
-

@@ -6,9 +6,15 @@
 
         <p>Hola {{ title }}</p>
 
-        <ProvideAndInjectComponent/>
+        <!-- v-bind:class="{ active: isActive, 'text-with-error' : hasError }" -->
+        <ClassStyleBindingComponent
+            class="hola"
+            v-bind:class="{ classObject }"
+        />
 
         <div v-show="false">
+
+            <ProvideAndInjectComponent/>
 
             <MonoRootComponent
                 tag="tag-from-parent"

@@ -1,12 +1,13 @@
 import * as vue from "vue";
 
-import CommunicationComponent    from "./vue/ui/CommunicationComponent.vue";
-import DynamicComponents         from "./vue/ui/DynamicComponents.vue";
-import MonoRootComponent         from "./vue/ui/MonoRootComponent.vue";
-import MultiRootComponent        from "./vue/ui/MultiRootComponent.vue";
-import OneComponent              from "./vue/ui/OneComponent.vue";
-import ProvideAndInjectComponent from "./vue/ui/ProvideAndInjectComponent.vue";
-import SlotComponent             from "./vue/ui/SlotComponent.vue";
+import ClassStyleBindingComponent from "./vue/ui/ClassStyleBindingComponent.vue";
+import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
+import DynamicComponents          from "./vue/ui/DynamicComponents.vue";
+import MonoRootComponent          from "./vue/ui/MonoRootComponent.vue";
+import MultiRootComponent         from "./vue/ui/MultiRootComponent.vue";
+import OneComponent               from "./vue/ui/OneComponent.vue";
+import ProvideAndInjectComponent  from "./vue/ui/ProvideAndInjectComponent.vue";
+import SlotComponent              from "./vue/ui/SlotComponent.vue";
 
 interface IBook {
 
@@ -21,6 +22,15 @@ interface ISlot {
 }
 
 interface IData {
+
+    classObject : {
+
+        isActive    : boolean,
+        hasError    : boolean,
+
+    },
+    isActive    : boolean,
+    hasError    : boolean,
 
     book            : IBook;
     clicksOnButton1 : number,
@@ -53,6 +63,7 @@ const App = vue.defineComponent( {
 
     components : {
 
+        ClassStyleBindingComponent,
         CommunicationComponent,
         DynamicComponents,
         MonoRootComponent,
@@ -66,6 +77,14 @@ const App = vue.defineComponent( {
     data () : IData {
 
         return {
+
+            classObject : {
+                isActive : true,
+                hasError : false,
+            },
+
+            isActive : true,
+            hasError : false,
 
             aNumber : 50 as number,
 
