@@ -8,6 +8,7 @@ import MultiRootComponent         from "./vue/ui/MultiRootComponent.vue";
 import OneComponent               from "./vue/ui/OneComponent.vue";
 import ProvideAndInjectComponent  from "./vue/ui/ProvideAndInjectComponent.vue";
 import SlotComponent              from "./vue/ui/SlotComponent.vue";
+import TemplateRefComponent       from "./vue/ui/TemplateRefComponent.vue";
 
 interface IBook {
 
@@ -45,10 +46,13 @@ interface IData {
 interface IMethod  {
 
     callbackForButton : () => void;
+    showAlertInRef : () => void;
 
 }
 
-interface IComponent extends IData, IMethod { }
+interface IComponent extends IData, IMethod {
+    $refs  : Record<string, HTMLInputElement | typeof TemplateRefComponent>;
+}
 
 // const App : vue.DefineComponent = vue.defineComponent( {
 const App = vue.defineComponent( {
@@ -71,6 +75,7 @@ const App = vue.defineComponent( {
         ProvideAndInjectComponent,
         OneComponent,
         SlotComponent,
+        TemplateRefComponent,
 
     },
 
@@ -148,6 +153,21 @@ const App = vue.defineComponent( {
 
         },
 
+        showAlertInRef ( data : unknown ) : void {
+            const me : IComponent = this;
+
+            me.$refs.refToComponent.showAlert();
+
+            console.info( "%%%%%%%%%%%%%%%%%%%%%%%%%" );
+            console.info( me.$refs.refToComponent );
+            console.info( me.$refs.refToComponent.showAlert );
+            console.info( me.$refs.refToComponent.dataInChild );
+            console.info( me.$refs.refToComponent.propInChild );
+            console.info( me.$refs.refToComponent.computedInChild );
+            console.info( "%%%%%%%%%%%%%%%%%%%%%%%%%" );
+
+        }
+
     },
 
     beforeCreate () : void {
@@ -161,6 +181,7 @@ const App = vue.defineComponent( {
     mounted () : void {
         console.info( "App - En el hook de mounted (12)", this.slotName );
         console.info( this.book.name );
+
     },
 
     beforeMount () : void {
