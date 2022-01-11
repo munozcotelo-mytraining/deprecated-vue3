@@ -3,6 +3,7 @@ import * as vue from "vue";
 import ClassStyleBindingComponent from "./vue/ui/ClassStyleBindingComponent.vue";
 import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
 import DynamicComponents          from "./vue/ui/DynamicComponents.vue";
+import FormulariosComponent       from "./vue/ui/FormulariosComponent.vue";
 import MonoRootComponent          from "./vue/ui/MonoRootComponent.vue";
 import MultiRootComponent         from "./vue/ui/MultiRootComponent.vue";
 import OneComponent               from "./vue/ui/OneComponent.vue";
@@ -70,6 +71,7 @@ const App = vue.defineComponent( {
         ClassStyleBindingComponent,
         CommunicationComponent,
         DynamicComponents,
+        FormulariosComponent,
         MonoRootComponent,
         MultiRootComponent,
         ProvideAndInjectComponent,

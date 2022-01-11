@@ -6,14 +6,16 @@
 
         <p>Hola {{ title }}</p>
 
+        <FormulariosComponent />
+
+        <div v-show="false">
+
         <div>
             <TemplateRefComponent propInChild="1234" ref="refToComponent"/>
             <p>Este boton accede a la referencia del componente <strong>TemplateRefComponent</strong>
             y dispara su metodo showAlert()</p>
             <button v-on:click="showAlertInRef">Alerta en hijo</button>
         </div>
-
-        <div v-show="false">
 
             <!-- v-bind:class="{ active: isActive, 'text-with-error' : hasError }" -->
             <ClassStyleBindingComponent

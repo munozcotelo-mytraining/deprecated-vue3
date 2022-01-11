@@ -46,6 +46,10 @@ const TemplateRefComponent  = vue.defineComponent( {
 
     },
 
+    created() : void {
+        console.info( "*************************" );
+    },
+
     computed : {
 
         computedInChild () : string {
