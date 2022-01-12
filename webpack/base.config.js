@@ -84,7 +84,6 @@ const configuration = {
         alias : {
             // 'vue$': path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm.js" ) /* para vue2 */
             "vue$": path.resolve( contextPath, "node_modules", "vue", "dist", "vue.esm-bundler.js" ) /* para vue3*/
-
         }
 
 

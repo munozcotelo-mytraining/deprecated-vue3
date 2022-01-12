@@ -9,6 +9,7 @@ import MultiRootComponent         from "./vue/ui/MultiRootComponent.vue";
 import OneComponent               from "./vue/ui/OneComponent.vue";
 import ProvideAndInjectComponent  from "./vue/ui/ProvideAndInjectComponent.vue";
 import SlotComponent              from "./vue/ui/SlotComponent.vue";
+import TeleportComponent       from "./vue/ui/TeleportComponent.vue";
 import TemplateRefComponent       from "./vue/ui/TemplateRefComponent.vue";
 
 interface IBook {
@@ -77,6 +78,7 @@ const App = vue.defineComponent( {
         ProvideAndInjectComponent,
         OneComponent,
         SlotComponent,
+        TeleportComponent,
         TemplateRefComponent,
 
     },

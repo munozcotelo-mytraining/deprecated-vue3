@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,22 @@
         <link rel="stylesheet" href="./style.css">
         <title>Probando Vue3</title>
     </head>
+
     <body>
+
+        <div id="targetTeleport0">
+            Target teleport 0
+        </div>
+
+        <div id="targetTeleport1">
+            Target teleport 1
+        </div>
+
         <div id="bootstrap"></div>
         <% for (key in htmlWebpackPlugin.files.js) { %>
         <script type="text/javascript" src=".<%= htmlWebpackPlugin.files.js[key] %>"></script>
         <% } %>
-    </body>
-</html>
 
+    </body>
+
+</html>
