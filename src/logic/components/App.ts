@@ -2,6 +2,7 @@ import * as vue from "vue";
 
 import ClassStyleBindingComponent from "./vue/ui/ClassStyleBindingComponent.vue";
 import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
+import DirectivesComponent        from "./vue/ui/DirectivesComponent.vue";
 import DynamicComponents          from "./vue/ui/DynamicComponents.vue";
 import FormulariosComponent       from "./vue/ui/FormulariosComponent.vue";
 import MonoRootComponent          from "./vue/ui/MonoRootComponent.vue";
@@ -9,7 +10,7 @@ import MultiRootComponent         from "./vue/ui/MultiRootComponent.vue";
 import OneComponent               from "./vue/ui/OneComponent.vue";
 import ProvideAndInjectComponent  from "./vue/ui/ProvideAndInjectComponent.vue";
 import SlotComponent              from "./vue/ui/SlotComponent.vue";
-import TeleportComponent       from "./vue/ui/TeleportComponent.vue";
+import TeleportComponent          from "./vue/ui/TeleportComponent.vue";
 import TemplateRefComponent       from "./vue/ui/TemplateRefComponent.vue";
 
 interface IBook {
@@ -71,6 +72,7 @@ const App = vue.defineComponent( {
 
         ClassStyleBindingComponent,
         CommunicationComponent,
+        DirectivesComponent,
         DynamicComponents,
         FormulariosComponent,
         MonoRootComponent,

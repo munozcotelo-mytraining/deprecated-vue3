@@ -1,5 +1,7 @@
 import * as vue from "vue";
 
+import { amgarciaDirective } from "./logic/directives/amgarcia-directive";
+
 import App from "./logic/components/App.vue";
 
 // const vm : vue.App = vue.createApp(App);
@@ -16,6 +18,8 @@ const vm : vue.App = vue.createApp( {
     },
 
 } );
+
+vm.directive( "amgarcia", amgarciaDirective );
 
 /* Avoid warning message. The message indicates set this config to not show it */
 vm.config.unwrapInjectedRef = true;
