@@ -6,13 +6,11 @@
 
         <p>Hola {{ title }}</p>
 
-        <!-- <p v-amgarcia:paramDos="argValueForDirective">Hola {{ title }}</p> -->
-        <!-- <p v-amgarcia:[argNameForDirective]="'a string value'">***Hola {{ title }}</p> -->
-        <!-- <p v-amgarcia:[argNameForDirective]="{ k1: 10, k2: 20 }">***Hola {{ title }}</p> -->
-
-        <DirectivesComponent />
+        <MixinsComponent />
 
         <div v-if="false">
+
+            <DirectivesComponent />
 
             <TeleportComponent />
 

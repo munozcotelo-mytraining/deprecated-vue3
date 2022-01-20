@@ -5,6 +5,7 @@ import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
 import DirectivesComponent        from "./vue/ui/DirectivesComponent.vue";
 import DynamicComponents          from "./vue/ui/DynamicComponents.vue";
 import FormulariosComponent       from "./vue/ui/FormulariosComponent.vue";
+import MixinsComponent            from "./vue/ui/MixinsComponent.vue";
 import MonoRootComponent          from "./vue/ui/MonoRootComponent.vue";
 import MultiRootComponent         from "./vue/ui/MultiRootComponent.vue";
 import OneComponent               from "./vue/ui/OneComponent.vue";
@@ -75,10 +76,11 @@ const App = vue.defineComponent( {
         DirectivesComponent,
         DynamicComponents,
         FormulariosComponent,
+        MixinsComponent,
         MonoRootComponent,
         MultiRootComponent,
-        ProvideAndInjectComponent,
         OneComponent,
+        ProvideAndInjectComponent,
         SlotComponent,
         TeleportComponent,
         TemplateRefComponent,

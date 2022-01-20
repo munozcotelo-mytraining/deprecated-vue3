@@ -21,6 +21,18 @@ const vm : vue.App = vue.createApp( {
 
 vm.directive( "amgarcia", amgarciaDirective );
 
+vm.mixin( {
+
+    created () : void {
+
+        console.info( "Created en mixin global");
+        console.info( "Created en mixin global");
+        console.info( "Created en mixin global");
+
+    },
+
+} );
+
 /* Avoid warning message. The message indicates set this config to not show it */
 vm.config.unwrapInjectedRef = true;
 
