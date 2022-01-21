@@ -17,4 +17,7 @@ const vm : vue.App = vue.createApp( {
 
 } );
 
+/* Avoid warning message. The message indicates set this config to not show it */
+vm.config.unwrapInjectedRef = true;
+
 vm.mount( "#bootstrap" );

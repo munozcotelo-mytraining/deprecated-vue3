@@ -30,7 +30,7 @@ const Hijo2  = vue.defineComponent( {
 
     },
 
-    inject : [ "ownProperty", "valueFromParent", "random" ],
+    inject : [ "ownProperty", "valueFromParent", "random", "randomBis", "objProperty" ],
 
     computed : {
     },
