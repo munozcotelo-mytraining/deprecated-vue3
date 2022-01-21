@@ -2,6 +2,7 @@ import * as vue from "vue";
 
 import ClassStyleBindingComponent from "./vue/ui/ClassStyleBindingComponent.vue";
 import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
+import CompositionApiComponent    from "./vue/ui/CompositionApiComponent.vue";
 import DirectivesComponent        from "./vue/ui/DirectivesComponent.vue";
 import DynamicComponents          from "./vue/ui/DynamicComponents.vue";
 import FormulariosComponent       from "./vue/ui/FormulariosComponent.vue";
@@ -72,6 +73,7 @@ const App = vue.defineComponent( {
     components : {
 
         ClassStyleBindingComponent,
+        CompositionApiComponent,
         CommunicationComponent,
         DirectivesComponent,
         DynamicComponents,

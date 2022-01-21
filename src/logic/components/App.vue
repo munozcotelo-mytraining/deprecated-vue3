@@ -6,9 +6,13 @@
 
         <p>Hola {{ title }}</p>
 
-        <MixinsComponent />
+        <CompositionApiComponent
+            data-one="dato uno"
+        />
 
         <div v-if="false">
+
+            <MixinsComponent />
 
             <DirectivesComponent />
 
