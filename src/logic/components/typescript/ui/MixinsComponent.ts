@@ -114,5 +114,3 @@ const MixinsComponent  = vue.defineComponent( {
 } );
 
 export default MixinsComponent;
-
-

@@ -42,6 +42,11 @@ const Hijo1  = vue.defineComponent( {
     },
 
     methods : {
+
+        sayHello () : void {
+            alert( "Hello from Hijo1" );
+        },
+
     },
 
     created () : void { },

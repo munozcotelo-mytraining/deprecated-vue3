@@ -19,7 +19,6 @@ interface IMethod  {
 }
 
 interface IComponent extends IProps, IData, IMethod, IComputed {
-    $attrs : Record<string, unknown>;
     $refs  : Record<string, HTMLInputElement>;
 }
 
@@ -47,7 +46,7 @@ const TemplateRefComponent  = vue.defineComponent( {
     },
 
     created() : void {
-        console.info( "*************************" );
+        console.info( "Created hook en TemplateRefComponent" );
     },
 
     computed : {

@@ -2,6 +2,7 @@ import * as vue from "vue";
 
 import ClassStyleBindingComponent from "./vue/ui/ClassStyleBindingComponent.vue";
 import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
+import CompositionApiComponent    from "./vue/ui/CompositionApiComponent.vue";
 import DirectivesComponent        from "./vue/ui/DirectivesComponent.vue";
 import DynamicComponents          from "./vue/ui/DynamicComponents.vue";
 import FormulariosComponent       from "./vue/ui/FormulariosComponent.vue";
@@ -45,6 +46,8 @@ interface IData {
     theSlots        : ISlot[];
     slotName        : string;
 
+    propToCompositionApi : number;
+
 }
 
 interface IMethod  {
@@ -55,7 +58,7 @@ interface IMethod  {
 }
 
 interface IComponent extends IData, IMethod {
-    $refs  : Record<string, HTMLInputElement | typeof TemplateRefComponent>;
+    $refs  : Record<string, HTMLInputElement | typeof TemplateRefComponent | typeof CompositionApiComponent>;
 }
 
 // const App : vue.DefineComponent = vue.defineComponent( {
@@ -72,6 +75,7 @@ const App = vue.defineComponent( {
     components : {
 
         ClassStyleBindingComponent,
+        CompositionApiComponent,
         CommunicationComponent,
         DirectivesComponent,
         DynamicComponents,
@@ -114,6 +118,8 @@ const App = vue.defineComponent( {
 
             slotName : "slot1" as string,
 
+            propToCompositionApi : 33 as number,
+
             theSlots : [
 
                 { name : "slot1", content: "contenido slot1 desde el padre" },
@@ -122,6 +128,23 @@ const App = vue.defineComponent( {
             ] as ISlot[],
 
         }
+
+    },
+
+    provide () {
+
+        const me : IComponent = this;
+
+        return {
+            /* hacemos computada la variable en el provide para convertirla en reactiva para los componentes que la van a injectaar */
+            slotName   : vue.computed( () => me.slotName ),
+            /* ofrecemos a traves de provide una función que puede ser llamada por los hijos y que modifica el valor el valor de la propiedad en el padre */
+            changeSlot : ( newName :  string ) => {
+                setTimeout( () => {
+                    me.slotName = newName;
+                }, 1200 );
+            },
+        };
 
     },
 
@@ -162,6 +185,7 @@ const App = vue.defineComponent( {
         },
 
         showAlertInRef ( data : unknown ) : void {
+
             const me : IComponent = this;
 
             me.$refs.refToComponent.showAlert();
@@ -183,12 +207,22 @@ const App = vue.defineComponent( {
     },
 
     created () : void {
+
+        const me : IComponent = this;
+
         console.info( `App - En el hook de created. Ya tengo this.book ${this.book}`, this.slotName );
+
+        setTimeout( () => {
+            me.propToCompositionApi += 1000;
+        }, 8000 );
+
     },
 
     mounted () : void {
         console.info( "App - En el hook de mounted (12)", this.slotName );
         console.info( this.book.name );
+
+        console.info( "====> ¿que expone CompositionApiComponent?", this.$refs.refToCompositionApiComponent );
 
     },
 

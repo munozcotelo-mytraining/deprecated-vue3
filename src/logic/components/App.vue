@@ -6,9 +6,20 @@
 
         <p>Hola {{ title }}</p>
 
-        <MixinsComponent />
+        <p>{{ slotName }}***</p>
+
+        <CompositionApiComponent
+            prop-one="propiedad uno"
+            v-bind:propNumber=propToCompositionApi
+            id="checkCompositionApi"
+            ref="refToCompositionApiComponent"
+        >
+            <p>un slot</p>
+        </CompositionApiComponent>
 
         <div v-if="false">
+
+            <MixinsComponent />
 
             <DirectivesComponent />
 
@@ -48,7 +59,7 @@
                 <p>Clicks on button3 inside CommunicationComponent : {{ clicksOnButton3 }}</p>
             </div>
 
-            <!-- <DynamicComponents/> -->
+            <DynamicComponents/>
 
             <div class="container">
 
