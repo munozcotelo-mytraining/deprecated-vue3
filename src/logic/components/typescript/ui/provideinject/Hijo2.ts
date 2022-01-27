@@ -38,7 +38,9 @@ const Hijo2  = vue.defineComponent( {
     methods : {
     },
 
-    created () : void { },
+    created () : void {
+        console.info( "Hijo2 created", this );
+    },
 
 } );
 

@@ -72,6 +72,8 @@ const App = vue.defineComponent( {
 
     },
 
+    inject : [ "pluginInfo", "pluginOptions" ],
+
     components : {
 
         ClassStyleBindingComponent,
@@ -215,6 +217,10 @@ const App = vue.defineComponent( {
         setTimeout( () => {
             me.propToCompositionApi += 1000;
         }, 8000 );
+
+        console.info( "App - check plugin", ( me as any ).variableFromPlugin );
+        console.info( "App - check plugin", ( me as any ).methodFromPlugin(), ( me as any ).methodFromPlugin );
+        console.info( "*****", ( me as any ) );
 
     },
 

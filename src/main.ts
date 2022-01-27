@@ -1,5 +1,6 @@
 import * as vue from "vue";
 
+import { myPlugin }          from "./logic/plugins/myPlugin";
 import { amgarciaDirective } from "./logic/directives/amgarcia-directive";
 
 import App from "./logic/components/App.vue";
@@ -18,6 +19,8 @@ const vm : vue.App = vue.createApp( {
     },
 
 } );
+
+vm.use( myPlugin, { a : 1, b : 2 } );
 
 // vm.directive( "amgarcia", amgarciaDirective );
 
