@@ -12,8 +12,8 @@ interface IAmgarciaCompositionApi {
 
 function amgarciaCompositionApi() : IAmgarciaCompositionApi {
 
-    let dataTwo   : vue.Ref<number> = vue.ref( 0 );
-    let dataThree : vue.Ref<number> = vue.ref( 0 );
+    let dataTwo   : vue.Ref<number> = vue.ref<number>( 0 );
+    let dataThree : vue.Ref<number> = vue.ref<number>( 0 );
 
     // let dataObject : Record<string, number> = {
     let dataObject : Record<string, number> = vue.reactive<Record<string, number>>( {

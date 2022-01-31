@@ -100,10 +100,10 @@ const App = vue.defineComponent( {
             classObject : {
                 isActive : true,
                 hasError : false,
-            },
+            } as IData[ "classObject" ],
 
-            isActive : true,
-            hasError : false,
+            isActive : true as boolean,
+            hasError : false as boolean,
 
             aNumber : 50 as number,
 

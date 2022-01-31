@@ -46,7 +46,18 @@ const CommunicationComponent  = vue.defineComponent( {
 
     },
 
-    emits : [ "eventForClicking1", "eventForClicking2"  ],
+    // emits : [ "eventForClicking1", "eventForClicking2"  ],
+    emits : {
+
+        eventForClicking1( data1 : number, data2 : number ) {
+            return true
+        },
+
+        eventForClicking2( data1 : number, data2 : number, data3 : number ) {
+            return data1 > 0;
+        },
+
+    },
 
     computed : {
     },
@@ -66,7 +77,6 @@ const CommunicationComponent  = vue.defineComponent( {
             const me : IComponent = this;
 
             me.$emit( "eventForClicking2", 1, 2, 3 );
-
 
         },
 

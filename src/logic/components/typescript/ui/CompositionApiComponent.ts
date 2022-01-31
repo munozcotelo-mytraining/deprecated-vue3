@@ -23,7 +23,7 @@ interface IComposition {
     changeSlot        : ( newName : string ) => void;
 
     reference : ReturnType<typeof templateRefCompositionApi>[ "reference" ],
-    header    : ReturnType<typeof templateRefCompositionApi>[ "reference" ],
+    header    : ReturnType<typeof templateRefCompositionApi>[ "header" ],
 
 }
 
@@ -32,7 +32,7 @@ interface IData {
     /* la seteo como opcional porque viene del composition api */
     dataOne   ?: string;
     reference ?: typeof Hijo1; //ReturnType<typeof templateRefCompositionApi>[ "reference" ],
-    header    ?: typeof Hijo1; //ReturnType<typeof templateRefCompositionApi>[ "reference" ],
+    header    ?: HTMLElement;  //ReturnType<typeof templateRefCompositionApi>[ "header" ],
 
 }
 
@@ -87,7 +87,7 @@ const CompositionApiComponent  = vue.defineComponent( {
         console.info( "setup - context.expose", context.expose );
 
         /* Variables y metodos */
-        let dataOne : vue.Ref<string> = vue.ref( "Message at the beggining. Should change" );
+        let dataOne : vue.Ref<string> = vue.ref<string>( "Message at the beggining. Should change" );
 
         const changeData : ( () => Promise<void> ) = async () : Promise<void> => {
 
@@ -120,8 +120,8 @@ const CompositionApiComponent  = vue.defineComponent( {
          */
         vue.onMounted( () => console.info( "setup - onMounted en el componente" ) );
 
-        // let dataTwo   : vue.Ref<number> = vue.ref( 0 );
-        // let dataThree : vue.Ref<number> = vue.ref( 0 );
+        // let dataTwo   : vue.Ref<number> = vue.ref<number>( 0 );
+        // let dataThree : vue.Ref<number> = vue.ref<number>( 0 );
         //
         // /* Watch multiple variables at once */
         // vue.watch( [ dataTwo, dataThree ], ( newValue : [ number, number ], oldValue : [ number, number ] ) => {
@@ -157,7 +157,7 @@ const CompositionApiComponent  = vue.defineComponent( {
 
         const { reference, header } : ReturnType<typeof templateRefCompositionApi> = templateRefCompositionApi();
 
-        console.info( "----", reference );
+        console.info( "------", reference );
 
         /*
          * Limitar la visibilidad del componente.

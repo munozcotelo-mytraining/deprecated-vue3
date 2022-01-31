@@ -39,7 +39,11 @@ const Hijo2  = vue.defineComponent( {
     },
 
     created () : void {
-        console.info( "Hijo2 created", this );
+        console.info( "Hijo2 created", this.$data, this.$props );
+    },
+
+    mounted () : void {
+        console.info( "Hijo2 mounted", this.$el );
     },
 
 } );

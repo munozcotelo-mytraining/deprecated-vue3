@@ -35,7 +35,7 @@ interface IProvide {
 
 }
 
-let randomBisReactive : vue.Ref = vue.ref( 0 );
+let randomBisReactive : vue.Ref<number> = vue.ref<number>( 0 );
 
 // const ProvideAndInjectComponent : vue.DefineComponent = vue.defineComponent<{}, {}, {}, {}>( {
 const ProvideAndInjectComponent  = vue.defineComponent( {

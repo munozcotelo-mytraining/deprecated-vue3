@@ -15,14 +15,14 @@ interface IProvideInjectCompositionApi {
 
 function provideInjectCompositionApi() : IProvideInjectCompositionApi {
 
-    const list : vue.Ref<number[]> = vue.ref( [] );
+    const list : vue.Ref<number[]> = vue.ref<number[]>( [] );
 
     let ownProperty     : string = "own property from compositionApi";
     let valueFromParent : string = "a value from parent ProvideAndInjectComponent";
 
     let random : vue.ComputedRef<number> = vue.computed( () => list.value.length );
 
-    let randomBis : vue.Ref<number> = vue.ref( 3 );
+    let randomBis : vue.Ref<number> = vue.ref<number>( 3 );
 
     // let objProperty : Record<string, any> = {
     let objProperty : Record<string, any> = vue.reactive<Record<string, any>>( {

@@ -16,9 +16,17 @@
 
             <p>PluginInfo (con provide desde el plugin)    : {{ pluginInfo }}</p>
             <p>Plugin Options ( con provide desde el plugin) : {{ JSON.stringify( pluginOptions ) }}</p>
+
         </div>
 
-        <ProvideAndInjectComponent/>
+        <CompositionApiComponent
+            prop-one="propiedad uno"
+            v-bind:propNumber=propToCompositionApi
+            id="checkCompositionApi"
+            ref="refToCompositionApiComponent"
+        >
+            <p>un slot</p>
+        </CompositionApiComponent>
 
         <div v-if="false">
 
