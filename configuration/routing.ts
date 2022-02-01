@@ -1,18 +1,18 @@
 import * as vueRouter from "vue-router";
 
-import EmptyComponent from "./../src/logic/components/vue/controllers/EmptyComponent.vue";
-import OneComponent   from "./../src/logic/components/vue/controllers/OneComponent.vue";
+import EmptyController from "./../src/logic/components/vue/controllers/EmptyController.vue";
+import OneController   from "./../src/logic/components/vue/controllers/OneController.vue";
 
-// const EmptyComponent = () => import(
+// const EmptyController = () => import(
 //     /* webpackChunkName: 'emptySection' */
 //     /* webpackMode: "lazy" */
-//     "./components/vue/controllers/EmptyComponent.vue"
+//     "./components/vue/controllers/EmptyController.vue"
 // );
 
-// const OneComponent = () => import(
+// const OneController = () => import(
 //     /* webpackChunkName: 'oneSection' */
 //     /* webpackMode: "lazy" */
-//     "./components/vue/controllers/OneComponent.vue"
+//     "./components/vue/controllers/OneController.vue"
 // );
 
 const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
@@ -23,11 +23,11 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
 
         path      : "/",
         name      : "empty",
-        // component : EmptyComponent,
+        // component : EmptyController,
         components : {
 
-            default    : EmptyComponent,
-            secondView : EmptyComponent,
+            default    : EmptyController,
+            secondView : EmptyController,
 
         },
         /* Informacion propia. Accesible desde el componente y desde los navigation guards */
@@ -46,7 +46,7 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
         name : "route1",
 
         /* Cuando hay una sola vista */
-        // component : OneComponent,
+        // component : OneController,
         // props : {
         //     tag : "tag for r1",
         // },
@@ -54,8 +54,8 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
         /* Cuando hay varias vistas */
         components : {
 
-            default    : OneComponent,
-            secondView : EmptyComponent,
+            default    : OneController,
+            secondView : EmptyController,
 
         },
         props : {
@@ -81,7 +81,7 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
         name : "route2",
 
         /* Cuando hay una sola vista */
-        // component : OneComponent,
+        // component : OneController,
         // props : {
         //     tag : "tag for r2",
         // },
@@ -89,8 +89,8 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
         /* Cuando hay varias vistas */
         components : {
 
-            default    : OneComponent,
-            secondView : EmptyComponent,
+            default    : OneController,
+            secondView : EmptyController,
 
         },
         props : {

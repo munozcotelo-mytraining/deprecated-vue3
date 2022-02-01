@@ -14,8 +14,8 @@
 
 <script lang="ts">
 
-import OneComponent from "./../../typescript/controllers/OneComponent";
-export default OneComponent;
+import OneController from "./../../typescript/controllers/OneController";
+export default OneController;
 
 </script>
 

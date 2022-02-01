@@ -22,7 +22,7 @@
 
 <script lang="ts">
 
-import EmptyComponent from "./../../typescript/controllers/EmptyComponent";
-export default EmptyComponent;
+import EmptyController from "./../../typescript/controllers/EmptyController";
+export default EmptyController;
 
 </script>

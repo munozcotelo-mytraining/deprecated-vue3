@@ -85,8 +85,10 @@ const App = vue.defineComponent( {
         const route : vueRouter.RouteLocationNormalizedLoaded = vueRouter.useRoute();
 
         vue.watch( route, ( newValue : vueRouter.RouteLocationNormalizedLoaded, oldValue : vueRouter.RouteLocationNormalizedLoaded ) => {
+
             console.info( "App - composition api - watch route", newValue.name, oldValue.name );
             console.info( "App - composition api - watch route", newValue.params, oldValue.params );
+
         } );
 
         const removeRoutes : () => void  = () : void => {

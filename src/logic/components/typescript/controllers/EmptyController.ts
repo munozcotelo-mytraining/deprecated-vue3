@@ -29,10 +29,10 @@ interface IComponent extends IProps, IData, IMethod, IComputed {
 
 }
 
-// const EmptyComponent : vue.DefineComponent = vue.defineComponent<{}, {}, {}, {}>( {
-const EmptyComponent = vue.defineComponent( {
+// const EmptyController : vue.DefineComponent = vue.defineComponent<{}, {}, {}, {}>( {
+const EmptyController = vue.defineComponent( {
 
-    name  : "EmptyComponent",
+    name  : "EmptyController",
     props : { },
 
     data  () : IData {
@@ -54,24 +54,24 @@ const EmptyComponent = vue.defineComponent( {
 
         next ( ( instance ) => {
 
-            console.info( "EmptyComponent - acceso al this gracias a next", instance );
+            console.info( "EmptyController - acceso al this gracias a next", instance );
             // instance.$router.push( { name : "route2" } );
             ( instance as any as IComponent ).numero = Math.random();
 
         } );
 
-        console.info( "EmptyComponent - beforeRouteEnter", to, from );
+        console.info( "EmptyController - beforeRouteEnter", to, from );
 
     },
 
     async beforeRouteUpdate( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
 
-        console.info( "EmptyComponent - beforeRouteUpdate", to, from );
+        console.info( "EmptyController - beforeRouteUpdate", to, from );
 
         return new Promise( ( resolve : () => void, reject : ( error : Error ) => void ) => {
 
             setTimeout( () => {
-                console.info( "EmptyComponent - beforeRouteUpdate promise" );
+                console.info( "EmptyController - beforeRouteUpdate promise" );
                 resolve();
             }, 4000 );
 
@@ -80,14 +80,14 @@ const EmptyComponent = vue.defineComponent( {
     },
 
     beforeRouteLeave( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
-        console.info( "EmptyComponent - beforeRouteLeave", to, from );
+        console.info( "EmptyController - beforeRouteLeave", to, from );
     },
 
     created () : void {
 
         const me : IComponent = this;
 
-        console.info( "EmptyComponent", me.$route.meta );
+        console.info( "EmptyController", me.$route.meta );
 
         console.info( me.$route );
 
@@ -121,4 +121,4 @@ const EmptyComponent = vue.defineComponent( {
 
 } );
 
-export default EmptyComponent;
+export default EmptyController;
