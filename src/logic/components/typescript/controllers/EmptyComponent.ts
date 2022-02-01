@@ -64,8 +64,19 @@ const EmptyComponent = vue.defineComponent( {
 
     },
 
-    beforeRouteUpdate( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+    async beforeRouteUpdate( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+
         console.info( "EmptyComponent - beforeRouteUpdate", to, from );
+
+        return new Promise( ( resolve : () => void, reject : ( error : Error ) => void ) => {
+
+            setTimeout( () => {
+                console.info( "EmptyComponent - beforeRouteUpdate promise" );
+                resolve();
+            }, 4000 );
+
+        } );
+
     },
 
     beforeRouteLeave( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
