@@ -89,9 +89,9 @@ const EmptyComponent = vue.defineComponent( {
             const me : IComponent = this;
             me.routesCreated      = false;
 
-            ( me.$router ).removeRoute( "route1" );
-            ( me.$router ).removeRoute( "route2" );
-            ( me.$router ).removeRoute( "empty" );
+            me.$router.removeRoute( "route1" );
+            me.$router.removeRoute( "route2" );
+            me.$router.removeRoute( "empty" );
 
         },
 
@@ -101,7 +101,7 @@ const EmptyComponent = vue.defineComponent( {
             me.routesCreated      = true;
 
             genRoutes().forEach( ( route : vueRouter.RouteRecordRaw ) => {
-                ( me.$router ).addRoute( route );
+                me.$router.addRoute( route );
             } );
 
         },

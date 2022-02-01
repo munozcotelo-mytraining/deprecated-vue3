@@ -1,4 +1,7 @@
-import * as vue from "vue";
+import * as vue       from "vue";
+import * as vueRouter from "vue-router";
+
+import { genRoutes } from "./../../../configuration/routing";
 
 import ClassStyleBindingComponent from "./vue/ui/ClassStyleBindingComponent.vue";
 import CommunicationComponent     from "./vue/ui/CommunicationComponent.vue";
@@ -61,10 +64,53 @@ interface IComponent extends IData, IMethod {
     $refs  : Record<string, HTMLInputElement | typeof TemplateRefComponent | typeof CompositionApiComponent>;
 }
 
+interface IComposition {
+
+    removeRoutes  : () => void;
+    addRoutes     : () => void;
+    routesCreated : vue.Ref<boolean>;
+
+}
+
 // const App : vue.DefineComponent = vue.defineComponent( {
 const App = vue.defineComponent( {
 
     name: "App",
+
+    setup ( props : any, context : vue.SetupContext ) : IComposition {
+
+        const router      : vueRouter.Router = vueRouter.useRouter();
+        let routesCreated : vue.Ref<boolean> = vue.ref<boolean>( true );
+
+        const removeRoutes : () => void  = () : void => {
+
+            routesCreated.value = false;
+
+            router.removeRoute( "route1" );
+            router.removeRoute( "route2" );
+            router.removeRoute( "empty" );
+
+        };
+
+        const addRoutes : () => void  = () : void => {
+
+            routesCreated.value = true;
+
+            genRoutes().forEach( ( route : vueRouter.RouteRecordRaw ) => {
+                router.addRoute( route );
+            } );
+
+        };
+
+        return {
+
+            removeRoutes,
+            addRoutes,
+            routesCreated,
+
+        };
+
+    },
 
     props : {
 
