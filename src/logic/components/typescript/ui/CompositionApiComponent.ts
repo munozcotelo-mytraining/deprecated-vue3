@@ -57,8 +57,8 @@ const CompositionApiComponent  = vue.defineComponent( {
     name: "CompositionApiComponent",
 
     // setup ( props : Record<string, unknown> ) : IComposition {
-
-    setup ( props : vue.ComponentCustomProperties, context : vue.SetupContext ) : IComposition {
+    // setup ( props : vue.ComponentCustomProperties, context : vue.SetupContext ) : IComposition {
+    setup ( props : any, context : vue.SetupContext ) : IComposition {
 
         /* El código escrito aqui va antes del beforeCreate y el created del componente en el que se aplica */
         console.info( "setup - en el setup", props, context );

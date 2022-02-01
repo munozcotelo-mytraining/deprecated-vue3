@@ -33,7 +33,7 @@
     },
     "include": [
         "src",
-        "config",
+        "configuration",
         "typings",
         "libs/banners"
     ],

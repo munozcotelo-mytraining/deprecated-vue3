@@ -1,12 +1,5 @@
 import * as vue from "vue";
 
-const a : vue.ComponentCustomOptions = {
-};
-const b : vue.ComponentCustomProperties = {
-};
-const c : vue.ComponentCustomProps = {
-};
-
 interface IData {
 
     message    : string;

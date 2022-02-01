@@ -6,7 +6,7 @@ const webpack             = require( "webpack" );
 const contextPath = path.resolve( __dirname, ".." );
 const distPath    = path.resolve( contextPath, "dist" );
 const srcPath     = path.resolve( contextPath, "src" );
-const configPath  = path.resolve( contextPath, "config" );
+const configPath  = path.resolve( contextPath, "configuration" );
 const bannersPath = path.resolve( contextPath, "libs", "banners" );
 //const nodeModules = path.resolve( contextPath, "node_modules" );
 

@@ -8,27 +8,34 @@
 
         <p>{{ slotName }}</p>
 
-        <div>
-            <h1>Viene del plugin</h1>
-            <p v-plugin-directive>Aplicar directiva desde plugin</p>
+        <p>Routes</p>
+        <ul>
+            <li><router-link to="/">Emtpy component</router-link></li>
 
-            <plugin-component/>
+            <li><router-link to="/r1/4/bla">Route r1/4/bla</router-link></li>
+            <li><router-link to="/r1/5/bla">Route r1/5/bla</router-link></li>
 
-            <p>PluginInfo (con provide desde el plugin)    : {{ pluginInfo }}</p>
-            <p>Plugin Options ( con provide desde el plugin) : {{ JSON.stringify( pluginOptions ) }}</p>
+            <li><router-link :to="{ name : 'route2', params : { identificador : 18 } }">Route r2/18/bla</router-link></li>
+            <li><router-link :to="{ name : 'route2', params : { identificador : 180 }, query : { filter: true} }">Route r2/180/bla?filter=true</router-link></li>
 
-        </div>
+        </ul>
 
-        <CompositionApiComponent
-            prop-one="propiedad uno"
-            v-bind:propNumber=propToCompositionApi
-            id="checkCompositionApi"
-            ref="refToCompositionApiComponent"
-        >
-            <p>un slot</p>
-        </CompositionApiComponent>
+        <router-view></router-view>
+        <router-view name="secondView"></router-view>
 
         <div v-if="false">
+
+            <div>
+                <h1>Viene del plugin</h1>
+                <p v-plugin-directive>Aplicar directiva desde plugin</p>
+
+                <plugin-component/>
+
+                <p>PluginInfo (con provide desde el plugin)    : {{ pluginInfo }}</p>
+                <p>Plugin Options ( con provide desde el plugin) : {{ JSON.stringify( pluginOptions ) }}</p>
+
+            </div>
+
 
             <CompositionApiComponent
                 prop-one="propiedad uno"
