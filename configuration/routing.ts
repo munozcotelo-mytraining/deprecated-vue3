@@ -47,8 +47,18 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
 
         /* Cuando hay una sola vista */
         // component : OneController,
-        // props : {
-        //     tag : "tag for r1",
+        // props : ( route : vueRouter.RouteLocationNormalized ) => {
+        //
+        //     console.info( "onecontroller", route.params.identificador );
+        //
+        //     return {
+        //
+        //         tag : "tag for r2",
+        //         query         : route.query,
+        //         identificador : route.params.identificador
+        //
+        //     }
+        //
         // },
 
         /* Cuando hay varias vistas */
@@ -60,9 +70,18 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
         },
         props : {
 
-            default : {
-                tag : "tag for r2",
+            default : (  route : vueRouter.RouteLocationNormalized ) => {
+
+                return {
+
+                    tag           : "tag for r2",
+                    query         : route.query,
+                    identificador : route.params.identificador
+
+                };
+
             }
+
         },
 
         meta : {
@@ -82,8 +101,18 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
 
         /* Cuando hay una sola vista */
         // component : OneController,
-        // props : {
-        //     tag : "tag for r2",
+        // props : ( route : vueRouter.RouteLocationNormalized ) => {
+        //
+        //     console.info( "onecontroller", route.params.identificador );
+        //
+        //     return {
+        //
+        //         tag : "tag for r2",
+        //         query         : route.query,
+        //         identificador : route.params.identificador
+        //
+        //     }
+        //
         // },
 
         /* Cuando hay varias vistas */
@@ -95,9 +124,20 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
         },
         props : {
 
-            default : {
-                tag : "tag for r2",
+            default : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                console.info( "onecontroller", route.params.identificador );
+
+                return {
+
+                    tag           : "tag for r2",
+                    query         : route.query,
+                    identificador : route.params.identificador
+
+                };
+
             }
+
         },
 
         meta : {

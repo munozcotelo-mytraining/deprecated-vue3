@@ -2,7 +2,11 @@ import * as vue       from "vue";
 import * as vueRouter from "vue-router";
 
 interface IProps {
-    tag : string;
+
+    tag           : string;
+    query         : Record<string, unknown>;
+    identificador : string;
+
 }
 
 interface IData {
@@ -54,19 +58,21 @@ const OneController  = vue.defineComponent( {
 
     props : {
 
-        tag : String,
+        tag           : String,
+        query         : Object as vue.PropType<Record<string, unknown>>,
+        identificador : String,
 
     },
 
     created () : void {
 
         const me : IComponent = this;
-        console.info( "OneController" );
+        console.info( "OneController", me.query, me.identificador, ( me as any ).$props );
 
     },
 
     beforeRouteUpdate( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
-        console.info( "OneController - beforeRouteUpdate", to, from );
+        console.info( "*******OneController - beforeRouteUpdate", to, from );
     },
 
 } );

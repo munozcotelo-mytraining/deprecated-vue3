@@ -32,11 +32,11 @@ vm.config.errorHandler = ( error : unknown, instance : vue.ComponentPublicInstan
 
 };
 
-vm.config.warnHandler = ( error : unknown, instance : vue.ComponentPublicInstance | null, info : string ) => {
+vm.config.warnHandler = ( message : string, instance : vue.ComponentPublicInstance | null, trace : string ) => {
 
-    console.info( "main warnHandler error", error );
+    console.info( "main warnHandler message", message );
     console.info( "main warnHandler instance", instance );
-    console.info( "main warnHandler info", info );
+    console.info( "main warnHandler trace", trace );
 
 };
 
