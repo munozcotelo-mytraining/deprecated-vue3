@@ -33,5 +33,3 @@ import OneController from "./../../typescript/controllers/OneController";
 export default OneController;
 
 </script>
-
-

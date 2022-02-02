@@ -18,6 +18,10 @@
             <li><router-link :to="{ name : 'route2', params : { identificador : 18 } }">Route r2/18/bla</router-link></li>
             <li><router-link :to="{ name : 'route2', params : { identificador : 180 }, query : { filter: true} }">Route r2/180/bla?filter=true</router-link></li>
 
+            <li><router-link :to="{ name : 'user', params : { id : 1 } }">Route user/1</router-link></li>
+            <li><router-link :to="{ name : 'userInfo', params : { id : 1 } }">Route user/1/info</router-link></li>
+            <li><router-link :to="{ name : 'userEdit', params : { id : 1 } }">Route user/1/edit</router-link></li>
+
         </ul>
 
         <router-view></router-view>

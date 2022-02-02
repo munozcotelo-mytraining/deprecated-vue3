@@ -1,7 +1,11 @@
 import * as vueRouter from "vue-router";
 
-import EmptyController from "./../src/logic/components/vue/controllers/EmptyController.vue";
-import OneController   from "./../src/logic/components/vue/controllers/OneController.vue";
+import EmptyController    from "./../src/logic/components/vue/controllers/EmptyController.vue";
+import OneController      from "./../src/logic/components/vue/controllers/OneController.vue";
+import UserController     from "./../src/logic/components/vue/controllers/UserController.vue";
+import UserHomeController from "./../src/logic/components/vue/controllers/UserHomeController.vue";
+import UserInfoController from "./../src/logic/components/vue/controllers/UserInfoController.vue";
+import UserEditController from "./../src/logic/components/vue/controllers/UserEditController.vue";
 
 // const EmptyController = () => import(
 //     /* webpackChunkName: 'emptySection' */
@@ -13,6 +17,30 @@ import OneController   from "./../src/logic/components/vue/controllers/OneContro
 //     /* webpackChunkName: 'oneSection' */
 //     /* webpackMode: "lazy" */
 //     "./components/vue/controllers/OneController.vue"
+// );
+
+// const UserController = () => import(
+//     /* webpackChunkName: 'userSection' */
+//     /* webpackMode: "lazy" */
+//     "./components/vue/controllers/UserController.vue"
+// );
+
+// const UserInfoController = () => import(
+//     /* webpackChunkName: 'userSection' */
+//     /* webpackMode: "lazy" */
+//     "./components/vue/controllers/UserInfoController.vue"
+// );
+
+// const UserEditController = () => import(
+//     /* webpackChunkName: 'userSection' */
+//     /* webpackMode: "lazy" */
+//     "./components/vue/controllers/UserEditController.vue"
+// );
+
+// const UserHomeController = () => import(
+//     /* webpackChunkName: 'userSection' */
+//     /* webpackMode: "lazy" */
+//     "./components/vue/controllers/UserHomeController.vue"
 // );
 
 const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
@@ -150,9 +178,84 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
 
     };
 
+    const user : vueRouter.RouteRecordRaw = {
+
+        path : "/user/:id",
+        name : "user",
+
+        /* Cuando hay varias vistas */
+        components : {
+            default    : UserController,
+        },
+
+        children : [
+
+           {
+
+                path      : "",
+                // component : UserHomeController,
+                components : {
+
+                    default     : UserHomeController,
+                    anotherView : EmptyController,
+
+                }
+
+           },
+
+            {
+
+                path      : "info",
+                name      : "userInfo",
+                // component : UserInfoController,
+                components : {
+
+                    default     : UserInfoController,
+                    anotherView : UserHomeController,
+
+                }
+
+            },
+
+            {
+
+                path      : "edit",
+                name      : "userEdit",
+                // component : UserEditController,
+                components : {
+
+                    default     : UserEditController,
+                    anotherView : UserHomeController,
+
+                }
+
+            }
+
+        ],
+
+        props : {
+
+            default : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                return {
+
+                    id : route.params.id,
+
+                };
+
+            }
+
+        },
+
+        meta : { },
+
+
+    };
+
     output.push( empty );
     output.push( one );
     output.push( two );
+    output.push( user );
 
     return output;
 

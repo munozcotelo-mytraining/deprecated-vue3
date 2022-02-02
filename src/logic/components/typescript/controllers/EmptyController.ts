@@ -46,6 +46,7 @@ const EmptyController = vue.defineComponent( {
 
     },
 
+    // async beforeRouteEnter( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized, next : vueRouter.NavigationGuardNext ) {
     beforeRouteEnter( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized, next : vueRouter.NavigationGuardNext ) {
 
         /* beforeRouteEnter no tiene acceso al this porque ocurre antes de todo
@@ -87,7 +88,9 @@ const EmptyController = vue.defineComponent( {
 
         const me : IComponent = this;
 
-        console.info( "EmptyController", me.$route.meta );
+        console.info( "EmptyController - route", me.$route );
+        console.info( "EmtpyController - router", me.$router );
+        console.info( "EmptyController - route.meta", me.$route.meta );
 
         console.info( me.$route );
 

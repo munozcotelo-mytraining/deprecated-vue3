@@ -19,6 +19,10 @@ interface IMethod  {
 }
 
 interface IComponent extends IProps, IData, IMethod, IComputed {
+
+    $router : vueRouter.Router;
+    $route  : vueRouter.RouteLocationNormalized;
+
 }
 
 interface IComposition {
