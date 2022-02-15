@@ -15,6 +15,10 @@ function amgarciaCompositionApi() : IAmgarciaCompositionApi {
     let dataTwo   : vue.Ref<number> = vue.ref<number>( 0 );
     let dataThree : vue.Ref<number> = vue.ref<number>( 0 );
 
+    /*
+     * Los objetos, de por si, TAMPOCO con reactivos
+     * Hay que utilizar vue.reactive para que lo sean
+     */
     // let dataObject : Record<string, number> = {
     let dataObject : Record<string, number> = vue.reactive<Record<string, number>>( {
 
@@ -29,21 +33,30 @@ function amgarciaCompositionApi() : IAmgarciaCompositionApi {
 
     const changeData : ( () => Promise<void> ) = async () : Promise<void> => {
 
+        console.info( "click****************************************" );
+        console.info( "click****************************************" );
+        console.info( "click****************************************" );
+        console.info( "click****************************************" );
+        console.info( "click****************************************" );
+
+        dataObject.k1 += 10;
+        dataObject.k2 += 20;
+
         setTimeout( () => {
 
-            dataTwo.value   += 100;
-            dataThree.value += 1000;
+            // dataTwo.value   += 100;
+            // dataThree.value += 1000;
 
             dataObject.k1 += 10;
             dataObject.k2 += 20;
 
         }, 2000 );
 
-        setTimeout( () => {
-
-            dataThree.value += 1000;
-
-        }, 5000 );
+        // setTimeout( () => {
+        //
+        //     dataThree.value += 1000;
+        //
+        // }, 5000 );
 
         return;
 

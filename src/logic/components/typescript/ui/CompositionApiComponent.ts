@@ -216,6 +216,11 @@ const CompositionApiComponent  = vue.defineComponent( {
     },
 
     methods : {
+
+        alvaro() {
+            console.info( "*****************" );
+        },
+
     },
 
     beforeCreate() : void {

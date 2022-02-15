@@ -15,6 +15,8 @@
 
         <p>----{{ slotName }}</p>
 
+        <button v-on:click="changeOtherData">click to test computed</button>
+
         <Hijo1 ref="reference"/>
 
     </div>
