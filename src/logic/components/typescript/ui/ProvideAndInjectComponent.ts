@@ -7,10 +7,10 @@ interface IProps {
 
 interface IData {
 
-    theList     : number[],
-    ownProperty : string;
-    random      : number;
-    randomBis   : number;
+    // theList     : number[],
+    // ownProperty : string;
+    // random      : number;
+    // randomBis   : number;
     objProperty : Record<string, any>;
 
 }
@@ -27,7 +27,7 @@ interface IComponent extends IProps, IData, IMethod, IComputed {
 
 interface IProvide {
 
-    ownProperty     : string;
+    // ownProperty     : string;
     valueFromParent : string;
     random          : vue.ComputedRef<number>;
     randomBis       : vue.Ref<number>;
@@ -54,10 +54,10 @@ const ProvideAndInjectComponent  = vue.defineComponent( {
 
         return {
 
-            ownProperty     : me.ownProperty,
-            valueFromParent : "a value from parent ProvideAndInjectComponent",
-            random          : vue.computed( () => this.theList.length ),
-            randomBis       : randomBisReactive,
+            // ownProperty     : me.ownProperty,
+            // valueFromParent : "a value from parent ProvideAndInjectComponent",
+            // random          : vue.computed( () => this.theList.length ),
+            // randomBis       : randomBisReactive,
             objProperty     : me.objProperty,
 
         } as IProvide;
@@ -70,10 +70,11 @@ const ProvideAndInjectComponent  = vue.defineComponent( {
     data () : IData {
 
         return {
-            theList     : [],
-            ownProperty : "Property in parent",
-            random      : 0,
-            randomBis   : 10,
+            // theList     : [],
+            // ownProperty : "Property in parent",
+            // random      : 0,
+            // randomBis   : 10,
+
             objProperty : {
 
                 d1 : {
@@ -91,12 +92,12 @@ const ProvideAndInjectComponent  = vue.defineComponent( {
 
         setInterval( () => {
 
-            me.ownProperty = "Mofified value";
-            me.theList.push( Math.random() );
-            me.randomBis += 1;
+            // me.ownProperty = "Mofified value";
+            // me.theList.push( Math.random() );
+            // me.randomBis += 1;
             me.objProperty.d1.value = Math.random();
 
-            randomBisReactive.value = me.randomBis;
+            // randomBisReactive.value = me.randomBis;
 
         }, 2500 );
 

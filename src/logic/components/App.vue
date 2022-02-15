@@ -19,14 +19,16 @@
 
         </div>
 
-        <CompositionApiComponent
-            prop-one="propiedad uno"
-            v-bind:propNumber=propToCompositionApi
-            id="checkCompositionApi"
-            ref="refToCompositionApiComponent"
-        >
-            <p>un slot</p>
-        </CompositionApiComponent>
+        <!-- <CompositionApiComponent -->
+        <!--     prop-one="propiedad uno" -->
+        <!--     v-bind:propNumber=propToCompositionApi -->
+        <!--     id="checkCompositionApi" -->
+        <!--     ref="refToCompositionApiComponent" -->
+        <!-- > -->
+        <!--     <p>un slot</p> -->
+        <!-- </CompositionApiComponent> -->
+
+        <ProvideAndInjectComponent/>
 
         <div v-if="false">
 
