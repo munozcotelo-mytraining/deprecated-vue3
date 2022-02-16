@@ -3,6 +3,7 @@
     <div class="component">
 
         <h2>Hijo 2</h2>
+        <p>--->{{ slotName }}</p>
 
         <p>Valor fijo provide from parent -> {{ valueFromParent }}</p>
         <p>No reactive property (because is a primitive type ) provide from parent -> {{ ownProperty }}</p>

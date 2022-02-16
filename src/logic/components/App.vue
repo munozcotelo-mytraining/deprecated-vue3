@@ -19,16 +19,11 @@
         <!--  -->
         <!-- </div> -->
 
-        <CompositionApiComponent
-            prop-one="propiedad uno"
-            v-bind:propNumber=propToCompositionApi
-            id="checkCompositionApi"
-            ref="refToCompositionApiComponent"
-        >
-            <p>un slot</p>
-        </CompositionApiComponent>
-
-        <!-- <ProvideAndInjectComponent/> -->
+        <AlvaroComponent
+            alvaro="Lorem ipsum"
+            tag1="value from parent App"
+            attr1="an attribute 1"
+        />
 
         <div v-if="false">
 

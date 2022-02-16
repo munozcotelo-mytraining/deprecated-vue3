@@ -30,7 +30,7 @@ const Hijo2  = vue.defineComponent( {
 
     },
 
-    inject : [ "ownProperty", "valueFromParent", "random", "randomBis", "objProperty" ],
+    inject : [ "ownProperty", "valueFromParent", "random", "randomBis", "objProperty", "slotName" ],
 
     computed : {
     },
@@ -43,7 +43,7 @@ const Hijo2  = vue.defineComponent( {
     },
 
     mounted () : void {
-        console.info( "Hijo2 mounted", this.$el );
+        console.info( "Hijo2 mounted", this.$el, this.slotName );
     },
 
 } );

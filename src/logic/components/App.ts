@@ -15,6 +15,10 @@ import SlotComponent              from "./vue/ui/SlotComponent.vue";
 import TeleportComponent          from "./vue/ui/TeleportComponent.vue";
 import TemplateRefComponent       from "./vue/ui/TemplateRefComponent.vue";
 
+
+import { withDIContainer } from "./../hoc/withDIContainer";
+import AlvaroComponent from "./vue/ui/AlvaroComponent.vue";
+
 interface IBook {
 
     name   : string;
@@ -75,6 +79,9 @@ const App = vue.defineComponent( {
     inject : [ "pluginInfo", "pluginOptions" ],
 
     components : {
+
+        AlvaroComponent : withDIContainer( AlvaroComponent ),
+        // AlvaroComponent : AlvaroComponent,
 
         ClassStyleBindingComponent,
         CompositionApiComponent,
