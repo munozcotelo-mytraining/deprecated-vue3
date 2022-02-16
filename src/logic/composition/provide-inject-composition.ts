@@ -33,7 +33,7 @@ function provideInjectCompositionApi() : IProvideInjectCompositionApi {
     // };
     } );
 
-    setTimeout( () => {
+    setInterval( () => {
 
         randomBis.value = Math.random();
         objProperty.d1.value = Math.random();

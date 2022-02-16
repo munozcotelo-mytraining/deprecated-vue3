@@ -8,27 +8,27 @@
 
         <p>{{ slotName }}</p>
 
-        <div>
-            <h1>Viene del plugin</h1>
-            <p v-plugin-directive>Aplicar directiva desde plugin</p>
+        <!-- <div> -->
+        <!--     <h1>Viene del plugin</h1> -->
+        <!--     <p v-plugin-directive>Aplicar directiva desde plugin</p> -->
+        <!--  -->
+        <!--     <plugin-component/> -->
+        <!--  -->
+        <!--     <p>PluginInfo (con provide desde el plugin)    : {{ pluginInfo }}</p> -->
+        <!--     <p>Plugin Options ( con provide desde el plugin) : {{ JSON.stringify( pluginOptions ) }}</p> -->
+        <!--  -->
+        <!-- </div> -->
 
-            <plugin-component/>
+        <CompositionApiComponent
+            prop-one="propiedad uno"
+            v-bind:propNumber=propToCompositionApi
+            id="checkCompositionApi"
+            ref="refToCompositionApiComponent"
+        >
+            <p>un slot</p>
+        </CompositionApiComponent>
 
-            <p>PluginInfo (con provide desde el plugin)    : {{ pluginInfo }}</p>
-            <p>Plugin Options ( con provide desde el plugin) : {{ JSON.stringify( pluginOptions ) }}</p>
-
-        </div>
-
-        <!-- <CompositionApiComponent -->
-        <!--     prop-one="propiedad uno" -->
-        <!--     v-bind:propNumber=propToCompositionApi -->
-        <!--     id="checkCompositionApi" -->
-        <!--     ref="refToCompositionApiComponent" -->
-        <!-- > -->
-        <!--     <p>un slot</p> -->
-        <!-- </CompositionApiComponent> -->
-
-        <ProvideAndInjectComponent/>
+        <!-- <ProvideAndInjectComponent/> -->
 
         <div v-if="false">
 

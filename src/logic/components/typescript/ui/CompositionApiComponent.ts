@@ -234,8 +234,10 @@ const CompositionApiComponent  = vue.defineComponent( {
     created () : void {
         const me : IComponent = this;
 
-        console.info( "CompositionApiComponent - created", me );
-        me.changeSlot( "Cambio en el nombre desde CompositionApiComponent" );
+        console.info( "CompositionApiComponent - created" );
+        setTimeout( () => {
+            me.changeSlot( "Cambio en el nombre desde CompositionApiComponent" );
+        }, 1500 );
 
     },
 
