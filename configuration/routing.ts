@@ -154,8 +154,6 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
 
             default : ( route : vueRouter.RouteLocationNormalized ) => {
 
-                console.info( "onecontroller", route.params.identificador );
-
                 return {
 
                     tag           : "tag for r2",
@@ -199,7 +197,34 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
                     default     : UserHomeController,
                     anotherView : EmptyController,
 
-                }
+                },
+                props : {
+
+                    default : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                        return {
+
+                            tag           : "tag for r2",
+                            query         : route.query,
+                            identificador : route.params.id
+
+                        };
+
+                    },
+
+                    anotherView : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                        return {
+
+                            tag           : "tag for r2",
+                            query         : route.query,
+                            identificador : route.params.id
+
+                        };
+
+                    }
+
+                },
 
            },
 
@@ -213,7 +238,35 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
                     default     : UserInfoController,
                     anotherView : UserHomeController,
 
-                }
+                },
+
+                props : {
+
+                    default : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                        return {
+
+                            tag           : "tag for r2",
+                            query         : route.query,
+                            identificador : route.params.id
+
+                        };
+
+                    },
+
+                    anotherView : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                        return {
+
+                            tag           : "tag for r2",
+                            query         : route.query,
+                            identificador : route.params.id
+
+                        };
+
+                    }
+
+                },
 
             },
 
@@ -227,7 +280,35 @@ const genRoutes : () => vueRouter.RouteRecordRaw[] = () => {
                     default     : UserEditController,
                     anotherView : UserHomeController,
 
-                }
+                },
+
+                props : {
+
+                    default : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                        return {
+
+                            tag           : "tag for r2",
+                            query         : route.query,
+                            identificador : route.params.id
+
+                        };
+
+                    },
+
+                    anotherView : ( route : vueRouter.RouteLocationNormalized ) => {
+
+                        return {
+
+                            tag           : "tag for r2",
+                            query         : route.query,
+                            identificador : route.params.id
+
+                        };
+
+                    }
+
+                },
 
             }
 

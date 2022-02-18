@@ -25,9 +25,10 @@ const UserEditController = vue.defineComponent( {
 
     name  : "UserEditController",
 
-    props : {
-        id : String,
-    },
+    // props : {
+    //     identificador : String,
+    // },
+    props: [ "tag", "query", "identificador" ],
 
 } );
 

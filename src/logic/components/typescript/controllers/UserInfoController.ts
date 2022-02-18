@@ -25,9 +25,25 @@ const UserInfoController = vue.defineComponent( {
 
     name  : "UserInfoController",
 
-    props : {
-        id : String,
+    // props : {
+    //     identificador : String,
+    // },
+
+    props: [ "tag", "query", "identificador" ],
+
+    beforeRouteEnter( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+        console.info( "test UserInfoController beforeRouteEnter" );
     },
+    beforeRouteUpdate( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+        console.info( "test UserInfoController beforeRouteUpdate" );
+    },
+    beforeRouteLeave( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+        console.info( "test UserInfoController beforeRouteLeave" );
+    },
+
+    mounted() {
+        console.info( "test", this.$route );
+    }
 
 } );
 

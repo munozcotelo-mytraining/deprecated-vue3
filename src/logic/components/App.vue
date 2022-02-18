@@ -22,6 +22,8 @@
             <li><router-link :to="{ name : 'userInfo', params : { id : 1 } }">Route user/1/info</router-link></li>
             <li><router-link :to="{ name : 'userEdit', params : { id : 1 } }">Route user/1/edit</router-link></li>
 
+            <li><router-link :to="{ name : 'userInfo', params : { id : 2 } }">Route user/2/info</router-link></li>
+
         </ul>
 
         <router-view></router-view>

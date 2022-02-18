@@ -24,6 +24,12 @@ const UserHomeController = vue.defineComponent( {
 
     name  : "UserHomeController",
 
+    props: [ "tag", "query", "identificador" ],
+
+    mounted() {
+        console.info( "test 1 - ", this.$props );
+    },
+
 } );
 
 export default UserHomeController;

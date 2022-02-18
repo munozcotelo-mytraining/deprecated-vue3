@@ -29,6 +29,16 @@ const UserController = vue.defineComponent( {
         id : String,
     },
 
+    beforeRouteEnter( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+        console.info( "test UserController beforeRouteEnter" );
+    },
+    beforeRouteUpdate( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+        console.info( "test UserController beforeRouteUpdate" );
+    },
+    beforeRouteLeave( to : vueRouter.RouteLocationNormalized, from : vueRouter.RouteLocationNormalized ) {
+        console.info( "test UserController beforeRouteLeave" );
+    },
+
 } );
 
 export default UserController;
