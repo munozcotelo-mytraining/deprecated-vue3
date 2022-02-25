@@ -1,7 +1,6 @@
 <template>
-
-    <div class="component">
-        <h2>Alvaro Component</h2>
+<div class="component">
+        <h2>Alvaro Component - High Order Component</h2>
 
         <p>prop alvaro : {{ alvaro }}</p>
         <p>prop tag1   : {{ tag1 }}</p>
