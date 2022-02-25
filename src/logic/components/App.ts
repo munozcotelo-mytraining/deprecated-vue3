@@ -15,6 +15,8 @@ import SlotComponent              from "./vue/ui/SlotComponent.vue";
 import TeleportComponent          from "./vue/ui/TeleportComponent.vue";
 import TemplateRefComponent       from "./vue/ui/TemplateRefComponent.vue";
 
+import ChildComponent from "./vue/ui/ChildComponet.vue";
+
 
 import { withDIContainer } from "./../hoc/withDIContainer";
 import AlvaroComponent from "./vue/ui/AlvaroComponent.vue";
@@ -97,6 +99,8 @@ const App = vue.defineComponent( {
         SlotComponent,
         TeleportComponent,
         TemplateRefComponent,
+
+        ChildComponent,
 
     },
 

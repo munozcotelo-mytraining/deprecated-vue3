@@ -19,13 +19,16 @@
         <!--  -->
         <!-- </div> -->
 
-        <AlvaroComponent
-            alvaro="Lorem ipsum"
-            tag1="value from parent App"
-            attr1="an attribute 1"
-        />
+        <span>Como pasar una valor numerico</span>
+        <ChildComponent v-bind:value="5" />
 
         <div v-if="false">
+
+            <AlvaroComponent
+                alvaro="Lorem ipsum"
+                tag1="value from parent App"
+                attr1="an attribute 1"
+            />
 
             <CompositionApiComponent
                 prop-one="propiedad uno"
