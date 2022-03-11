@@ -19,8 +19,17 @@
         <!--  -->
         <!-- </div> -->
 
-        <span>Como pasar una valor numerico</span>
-        <ChildComponent v-bind:value="5" />
+        <CompositionApiComponent
+            prop-one="propiedad uno"
+            v-bind:propNumber=propToCompositionApi
+            id="checkCompositionApi"
+            ref="refToCompositionApiComponent"
+        >
+            <p>un slot</p>
+        </CompositionApiComponent>
+
+        <!-- <span>Como pasar una valor numerico</span> -->
+        <!-- <ChildComponent v-bind:value="5" /> -->
 
         <div v-if="false">
 

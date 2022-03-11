@@ -221,6 +221,14 @@ const CompositionApiComponent  = vue.defineComponent( {
             console.info( "*****************" );
         },
 
+        triggerChangeInSetup() : void {
+
+            const me : IComponent = this;
+
+            me.dataOne = "cambio desde un method en el setup";
+
+        },
+
     },
 
     beforeCreate() : void {

@@ -17,6 +17,7 @@
         <p>slot en el App: {{ slotName }}</p>
 
         <button v-on:click="changeOtherData">click to test computed</button>
+        <button v-on:click="triggerChangeInSetup">click to test change from method</button>
 
         <Hijo1 ref="reference"/>
 
